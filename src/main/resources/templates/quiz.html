@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice - Algebra 1 Recap</title>
+    <title>Practice Test - Algebra 1 Recap</title>
     <link rel="stylesheet" th:href="@{/css/app.css}">
     <link rel="stylesheet" th:href="@{/css/nav.css}">
 </head>
@@ -16,7 +16,7 @@
             </div>
             <ul class="nav-links">
                 <li><a th:href="@{/lessons}">🎓 Lessons</a></li>
-                <li class="active"><a th:href="@{/quiz}">✏️ Practice</a></li>
+                <li class="active"><a th:href="@{/quiz}">✏️ Practice Test</a></li>
                 <li><a th:href="@{/tests}">📝 Tests</a></li>
                 <li><a th:href="@{/badges}">🏆 Badges</a></li>
             </ul>
@@ -26,7 +26,7 @@
         <main class="main-content">
             <!-- Top Bar -->
             <header class="top-bar">
-                <h1>Practice Questions</h1>
+                <h1>Practice Test</h1>
                 <div class="profile-section" th:if="${currentUser}">
                     <span class="avatar" th:if="${currentUser.avatarType == 'emoji'}" th:text="${currentUser.avatar}"></span>
                     <img th:if="${currentUser.avatarType == 'image'}" th:src="${currentUser.avatar}" class="avatar-img" alt="Avatar">
