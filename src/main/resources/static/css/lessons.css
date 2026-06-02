@@ -32,6 +32,16 @@
     margin-bottom: 1.25rem;
 }
 
+.toc-chapter-title {
+    font-size: 0.8rem;
+    color: #6c5ce7;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    margin-bottom: 0.4rem;
+    padding: 0.3rem 0.5rem;
+}
+
 .toc-chapter h4 {
     font-size: 0.85rem;
     color: #6c5ce7;
@@ -39,6 +49,50 @@
     margin-bottom: 0.5rem;
     padding-bottom: 0.25rem;
     border-bottom: 1px solid #f0f0f0;
+}
+
+.toc-list {
+    list-style: none;
+    padding: 0 0 0 0.5rem;
+}
+
+.toc-item {
+    margin-bottom: 0.2rem;
+}
+
+.toc-item a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    color: #2d3436;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.toc-item a:hover {
+    background: #f8f7ff;
+    color: #6c5ce7;
+}
+
+.toc-item.active a {
+    background: #f0edff;
+    color: #6c5ce7;
+    font-weight: 600;
+}
+
+.toc-section-num {
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #6c5ce7;
+    background: #f0edff;
+    padding: 0.15rem 0.4rem;
+    border-radius: 4px;
+    min-width: 28px;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .toc-chapter ul {

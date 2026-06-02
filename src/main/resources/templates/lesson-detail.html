@@ -27,7 +27,7 @@
         <main class="main-content">
             <!-- Top Bar -->
             <header class="top-bar">
-                <a th:href="@{/lessons}" class="back-link">← Back to Lessons</a>
+                <h1 class="page-title">🎓 Lessons</h1>
                 <div class="profile-section" th:if="${currentUser}">
                     <span class="avatar" th:if="${currentUser.avatarType == 'emoji'}" th:text="${currentUser.avatar}"></span>
                     <img th:if="${currentUser.avatarType == 'image'}" th:src="${currentUser.avatar}" class="avatar-img" alt="Avatar">
@@ -36,7 +36,27 @@
                 </div>
             </header>
 
-            <article class="lesson-detail">
+            <div class="lessons-layout">
+                <!-- Table of Contents Panel -->
+                <aside class="toc-panel">
+                    <h3>Table of Contents</h3>
+                    <div class="toc-chapters">
+                        <div th:each="entry : ${lessonsByChapter}" class="toc-chapter">
+                            <div class="toc-chapter-title" th:text="${entry.key}"></div>
+                            <ul class="toc-list">
+                                <li th:each="l : ${entry.value}" class="toc-item" th:classappend="${l.slug == lesson.slug} ? 'active' : ''">
+                                    <a th:href="@{/lessons/{slug}(slug=${l.slug})}">
+                                        <span class="toc-section-num" th:text="${l.getIcon()}"></span>
+                                        <span th:text="${l.title}"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Lesson Content -->
+                <article class="lesson-detail">
                 <div class="lesson-detail-header">
                     <span class="lesson-num" th:text="${lesson.getIcon()}"></span>
                     <h1 th:text="${lesson.title}"></h1>
@@ -78,6 +98,7 @@
                     </ul>
                 </div>
             </article>
+            </div>
         </main>
     </div>
 </body>

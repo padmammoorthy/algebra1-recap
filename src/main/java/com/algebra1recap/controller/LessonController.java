@@ -42,6 +42,7 @@ public class LessonController {
             return "redirect:/lessons";
         }
         model.addAttribute("lesson", lesson.get());
+        model.addAttribute("lessonsByChapter", lessonContentService.getLessonsByChapter());
         addUserAttributes(model, authentication);
         return "lesson-detail";
     }
