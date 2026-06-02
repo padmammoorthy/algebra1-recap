@@ -1,25 +1,25 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
   <!-- Background circle -->
-  <circle cx="60" cy="60" r="55" fill="#e6fff9" stroke="#00b894" stroke-width="2"/>
+  <circle cx="60" cy="60" r="56" fill="#00b894" opacity="0.1"/>
+  <circle cx="60" cy="60" r="56" stroke="#00b894" stroke-width="3"/>
   
-  <!-- Parent figure -->
-  <circle cx="48" cy="38" r="10" fill="#00b894"/>
-  <path d="M32,72 C32,58 40,50 48,50 C56,50 64,58 64,72" fill="#00b894"/>
+  <!-- Parent figure (larger) -->
+  <circle cx="50" cy="38" r="10" fill="#00b894"/>
+  <path d="M35 55 Q35 48 50 48 Q65 48 65 55 L65 72 Q65 75 62 75 L38 75 Q35 75 35 72Z" fill="#00b894"/>
   
-  <!-- Child figure -->
-  <circle cx="72" cy="48" r="8" fill="#55efc4"/>
-  <path d="M60,75 C60,65 66,58 72,58 C78,58 84,65 84,75" fill="#55efc4"/>
+  <!-- Child figure (smaller) -->
+  <circle cx="75" cy="48" r="7" fill="#55efc4"/>
+  <path d="M65 60 Q65 55 75 55 Q85 55 85 60 L85 72 Q85 74 83 74 L67 74 Q65 74 65 72Z" fill="#55efc4"/>
   
-  <!-- Chart/Progress bars -->
-  <rect x="25" y="85" width="12" height="20" rx="2" fill="#55efc4"/>
-  <rect x="42" y="78" width="12" height="27" rx="2" fill="#00b894"/>
-  <rect x="59" y="82" width="12" height="23" rx="2" fill="#55efc4"/>
-  <rect x="76" y="75" width="12" height="30" rx="2" fill="#00b894"/>
+  <!-- Chart/progress indicator -->
+  <rect x="32" y="82" width="56" height="24" rx="4" fill="#00b894" opacity="0.15" stroke="#00b894" stroke-width="1.5"/>
   
-  <!-- Trend line -->
-  <polyline points="31,84 48,77 65,81 82,74" fill="none" stroke="#00b894" stroke-width="2" stroke-linecap="round"/>
-  <circle cx="31" cy="84" r="2" fill="#00b894"/>
-  <circle cx="48" cy="77" r="2" fill="#00b894"/>
-  <circle cx="65" cy="81" r="2" fill="#00b894"/>
-  <circle cx="82" cy="74" r="2" fill="#00b894"/>
+  <!-- Bar chart bars -->
+  <rect x="40" y="96" width="6" height="6" rx="1" fill="#55efc4"/>
+  <rect x="50" y="92" width="6" height="10" rx="1" fill="#00b894" opacity="0.7"/>
+  <rect x="60" y="88" width="6" height="14" rx="1" fill="#00b894"/>
+  <rect x="70" y="90" width="6" height="12" rx="1" fill="#00b894" opacity="0.85"/>
+  
+  <!-- Checkmark -->
+  <path d="M78 88 L80 90 L84 85" stroke="#00b894" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
