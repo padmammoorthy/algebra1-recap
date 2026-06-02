@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Results - Algebra 1 Recap</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>📐 Algebra 1</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a th:href="@{/lessons}">🎓 Lessons</a></li>
+                <li><a th:href="@{/quiz}">✏️ Practice</a></li>
+                <li class="active"><a th:href="@{/tests}">📝 Tests</a></li>
+                <li><a th:href="@{/badges}">🏆 Badges</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <h1>Test Results</h1>
+                <div class="profile-section" th:if="${currentUser}">
+                    <span class="avatar" th:if="${currentUser.avatarType == 'emoji'}" th:text="${currentUser.avatar}"></span>
+                    <img th:if="${currentUser.avatarType == 'image'}" th:src="${currentUser.avatar}" class="avatar-img" alt="Avatar">
+                    <span class="display-name" th:text="${currentUser.displayName}"></span>
+                    <a th:href="@{/logout}" class="sign-out">Sign Out</a>
+                </div>
+            </header>
+
+            <div class="result-container">
+                <!-- Score Card -->
+                <div class="score-card">
+                    <h2 th:text="${test.name}"></h2>
+                    <div class="score-display">
+                        <div class="score-circle">
+                            <span class="score-emoji">🎯</span>
+                        </div>
+                        <p class="score-text">Test Completed!</p>
+                    </div>
+                </div>
+
+                <!-- Badges Earned -->
+                <div th:if="${badges != null and !badges.isEmpty()}" class="badges-earned-section">
+                    <h3>🏆 Your Badges</h3>
+                    <div class="badges-row">
+                        <div th:each="badge : ${badges}" class="badge-item">
+                            <span class="badge-emoji" th:text="${badge.badgeEmoji}"></span>
+                            <span class="badge-name" th:text="${badge.badgeName}"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review Section -->
+                <div class="review-section">
+                    <h3>📋 Question Review</h3>
+                    <div th:each="question, iterStat : ${questions}" class="review-card">
+                        <div class="review-question">
+                            <span class="review-num" th:text="'Q' + (${iterStat.index} + 1)"></span>
+                            <p th:text="${question.questionText}"></p>
+                        </div>
+                        <div class="review-answer">
+                            <span class="correct-answer">Correct: <strong th:text="${question.correctAnswer}"></strong></span>
+                        </div>
+                        <div th:if="${question.solutionExplanation}" class="review-explanation">
+                            <p th:text="${question.solutionExplanation}"></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="result-actions">
+                    <a th:href="@{/tests}" class="btn btn-primary">Back to Tests</a>
+                    <a th:href="@{/badges}" class="btn btn-secondary">View All Badges</a>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

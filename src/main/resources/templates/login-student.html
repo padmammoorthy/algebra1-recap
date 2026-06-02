@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login - Algebra 1 Recap</title>
+    <link rel="stylesheet" th:href="@{/css/auth.css}">
+</head>
+<body class="auth-body student-theme">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <h1>📐 Student Login</h1>
+                <p>Welcome back! Let's continue learning.</p>
+            </div>
+
+            <div th:if="${param.error}" class="alert alert-error">
+                Invalid username or password.
+            </div>
+            <div th:if="${param.roleError}" class="alert alert-error">
+                This account is not a student account. Please use the parent portal.
+            </div>
+            <div th:if="${success}" class="alert alert-success" th:text="${success}"></div>
+
+            <form th:action="@{/login}" method="post">
+                <input type="hidden" name="portal" value="student">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required autofocus placeholder="Enter your username">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required placeholder="Enter your password">
+                </div>
+                <button type="submit" class="btn btn-primary">Sign In</button>
+            </form>
+
+            <div class="auth-footer">
+                <p>Don't have an account? <a th:href="@{/signup}">Sign up</a></p>
+                <p><a th:href="@{/portal}">← Back to portal selection</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

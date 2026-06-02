@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Dashboard - Algebra 1 Recap</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" th:href="@{/css/parent-dashboard.css}">
+</head>
+<body class="parent-theme">
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar parent-sidebar">
+            <div class="sidebar-header">
+                <h2>👨‍👩‍👧 Parent View</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a th:href="@{/parent/dashboard}">📊 Dashboard</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <h1>Parent Dashboard</h1>
+                <div class="profile-section" th:if="${currentUser}">
+                    <span class="avatar" th:text="'👨‍👩‍👧'"></span>
+                    <span class="display-name" th:text="${currentUser.displayName}"></span>
+                    <a th:href="@{/logout}" class="sign-out">Sign Out</a>
+                </div>
+            </header>
+
+            <div class="dashboard-container">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">👨‍🎓</div>
+                        <div class="stat-info">
+                            <span class="stat-value" th:text="${totalStudents}"></span>
+                            <span class="stat-label">Total Students</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📝</div>
+                        <div class="stat-info">
+                            <span class="stat-value" th:text="${totalTestsTaken}"></span>
+                            <span class="stat-label">Tests Taken</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-info">
+                            <span class="stat-value" th:text="${#numbers.formatDecimal(averageScore, 1, 1)} + '%'"></span>
+                            <span class="stat-label">Average Score</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">✅</div>
+                        <div class="stat-info">
+                            <span class="stat-value" th:text="${#numbers.formatDecimal(passRate, 1, 1)} + '%'"></span>
+                            <span class="stat-label">Pass Rate</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Summaries -->
+                <section class="student-summaries">
+                    <h2>Student Progress</h2>
+                    <div class="student-cards">
+                        <div th:each="student : ${studentSummaries}" class="student-card">
+                            <div class="student-header">
+                                <span class="student-avatar"
+                                      th:if="${student['avatarType'] == 'emoji'}"
+                                      th:text="${student['avatar']}"></span>
+                                <img th:if="${student['avatarType'] == 'image'}"
+                                     th:src="${student['avatar']}" class="student-avatar-img" alt="">
+                                <div class="student-info">
+                                    <h3 th:text="${student['displayName']}"></h3>
+                                    <span class="student-username" th:text="'@' + ${student['username']}"></span>
+                                </div>
+                            </div>
+                            <div class="student-stats">
+                                <div class="mini-stat">
+                                    <span class="mini-value" th:text="${student['testsCompleted']}"></span>
+                                    <span class="mini-label">Tests</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="mini-value" th:text="${student['averageScore']} + '%'"></span>
+                                    <span class="mini-label">Avg Score</span>
+                                </div>
+                                <div class="mini-stat">
+                                    <span class="mini-value" th:text="${student['badgeCount']}"></span>
+                                    <span class="mini-label">Badges</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Recent Activity -->
+                <section class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div th:each="activity : ${recentActivity}" class="activity-item">
+                            <span class="activity-avatar"
+                                  th:if="${activity['avatarType'] == 'emoji'}"
+                                  th:text="${activity['avatar']}"></span>
+                            <div class="activity-details">
+                                <p>
+                                    <strong th:text="${activity['studentName']}"></strong>
+                                    completed
+                                    <span th:text="${activity['testName']}"></span>
+                                </p>
+                                <span class="activity-meta">
+                                    <span th:text="${activity['difficulty']}"></span> •
+                                    Score: <span th:text="${activity['result'].score + '/' + activity['result'].totalQuestions}"></span>
+                                </span>
+                            </div>
+                        </div>
+                        <p th:if="${recentActivity.isEmpty()}" class="no-activity">No test activity yet.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

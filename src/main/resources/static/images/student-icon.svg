@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="55" fill="#f8f7ff" stroke="#6c5ce7" stroke-width="2"/>
+  
+  <!-- Graduation cap -->
+  <polygon points="60,25 30,40 60,55 90,40" fill="#6c5ce7"/>
+  <rect x="57" y="25" width="6" height="8" fill="#a29bfe"/>
+  <rect x="56" y="21" width="8" height="4" rx="2" fill="#6c5ce7"/>
+  <line x1="30" y1="40" x2="30" y2="55" stroke="#6c5ce7" stroke-width="2"/>
+  <circle cx="30" cy="57" r="3" fill="#a29bfe"/>
+  
+  <!-- Person silhouette -->
+  <circle cx="60" cy="68" r="10" fill="#a29bfe"/>
+  <path d="M42,95 C42,82 52,75 60,75 C68,75 78,82 78,95" fill="#6c5ce7"/>
+  
+  <!-- Math symbols -->
+  <text x="18" y="80" font-family="Arial" font-size="12" fill="#a29bfe" font-weight="bold">x²</text>
+  <text x="88" y="78" font-family="Arial" font-size="14" fill="#a29bfe" font-weight="bold">+</text>
+  <text x="85" y="95" font-family="Arial" font-size="12" fill="#6c5ce7" font-weight="bold">π</text>
+  <text x="15" y="98" font-family="Arial" font-size="11" fill="#6c5ce7" font-weight="bold">∑</text>
+</svg>

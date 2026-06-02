@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons - Algebra 1 Recap</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+    <link rel="stylesheet" th:href="@{/css/lessons.css}">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>📐 Algebra 1</h2>
+            </div>
+            <ul class="nav-links">
+                <li class="active"><a th:href="@{/lessons}">🎓 Lessons</a></li>
+                <li><a th:href="@{/quiz}">✏️ Practice</a></li>
+                <li><a th:href="@{/tests}">📝 Tests</a></li>
+                <li><a th:href="@{/badges}">🏆 Badges</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <h1>Lessons</h1>
+                <div class="profile-section" th:if="${currentUser}">
+                    <span class="avatar" th:if="${currentUser.avatarType == 'emoji'}" th:text="${currentUser.avatar}"></span>
+                    <img th:if="${currentUser.avatarType == 'image'}" th:src="${currentUser.avatar}" class="avatar-img" alt="Avatar">
+                    <span class="display-name" th:text="${currentUser.displayName}"></span>
+                    <a th:href="@{/logout}" class="sign-out">Sign Out</a>
+                </div>
+            </header>
+
+            <div class="lessons-layout">
+                <!-- TOC Panel -->
+                <aside class="toc-panel">
+                    <h3>Table of Contents</h3>
+                    <div class="toc-chapters" th:each="entry : ${lessonsByChapter}">
+                        <div class="toc-chapter">
+                            <h4 th:text="${entry.key}"></h4>
+                            <ul>
+                                <li th:each="lesson : ${entry.value}">
+                                    <a th:href="@{/lessons/{slug}(slug=${lesson.slug})}">
+                                        <span class="toc-icon" th:text="${lesson.getIcon()}"></span>
+                                        <span th:text="${lesson.title}"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Lessons Grid -->
+                <section class="lessons-grid">
+                    <div th:each="entry : ${lessonsByChapter}" class="chapter-section">
+                        <h2 class="chapter-title" th:text="${entry.key}"></h2>
+                        <div class="cards-grid">
+                            <a th:each="lesson : ${entry.value}"
+                               th:href="@{/lessons/{slug}(slug=${lesson.slug})}"
+                               class="lesson-card">
+                                <div class="lesson-card-icon" th:text="${lesson.getIcon()}"></div>
+                                <h3 th:text="${lesson.title}"></h3>
+                                <p th:text="${lesson.description}"></p>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

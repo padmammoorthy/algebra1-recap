@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Background circle -->
+  <circle cx="60" cy="60" r="55" fill="#e6fff9" stroke="#00b894" stroke-width="2"/>
+  
+  <!-- Parent figure -->
+  <circle cx="48" cy="38" r="10" fill="#00b894"/>
+  <path d="M32,72 C32,58 40,50 48,50 C56,50 64,58 64,72" fill="#00b894"/>
+  
+  <!-- Child figure -->
+  <circle cx="72" cy="48" r="8" fill="#55efc4"/>
+  <path d="M60,75 C60,65 66,58 72,58 C78,58 84,65 84,75" fill="#55efc4"/>
+  
+  <!-- Chart/Progress bars -->
+  <rect x="25" y="85" width="12" height="20" rx="2" fill="#55efc4"/>
+  <rect x="42" y="78" width="12" height="27" rx="2" fill="#00b894"/>
+  <rect x="59" y="82" width="12" height="23" rx="2" fill="#55efc4"/>
+  <rect x="76" y="75" width="12" height="30" rx="2" fill="#00b894"/>
+  
+  <!-- Trend line -->
+  <polyline points="31,84 48,77 65,81 82,74" fill="none" stroke="#00b894" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="31" cy="84" r="2" fill="#00b894"/>
+  <circle cx="48" cy="77" r="2" fill="#00b894"/>
+  <circle cx="65" cy="81" r="2" fill="#00b894"/>
+  <circle cx="82" cy="74" r="2" fill="#00b894"/>
+</svg>

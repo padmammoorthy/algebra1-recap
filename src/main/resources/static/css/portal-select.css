@@ -1,0 +1,121 @@
+/* Portal Body */
+.portal-body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+    padding: 2rem;
+}
+
+.portal-container {
+    text-align: center;
+    width: 100%;
+    max-width: 700px;
+}
+
+.portal-header {
+    margin-bottom: 3rem;
+}
+
+.portal-header h1 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 0.75rem;
+}
+
+.portal-header p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.1rem;
+}
+
+/* Portal Cards */
+.portal-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.portal-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    transition: all 0.3s;
+    border: 3px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.portal-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.portal-card.student-card:hover {
+    border-color: #6c5ce7;
+}
+
+.portal-card.parent-card:hover {
+    border-color: #00b894;
+}
+
+.portal-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1.5rem;
+}
+
+.portal-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.portal-card h2 {
+    font-size: 1.4rem;
+    color: #2d3436;
+    margin-bottom: 0.75rem;
+}
+
+.portal-card p {
+    color: #636e72;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.portal-btn {
+    display: inline-block;
+    padding: 0.65rem 1.5rem;
+    background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+    color: white;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: box-shadow 0.2s;
+}
+
+.portal-btn:hover {
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.4);
+}
+
+.portal-btn.parent-btn {
+    background: linear-gradient(135deg, #00b894, #55efc4);
+}
+
+.portal-btn.parent-btn:hover {
+    box-shadow: 0 4px 12px rgba(0, 184, 148, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .portal-cards {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .portal-header h1 {
+        font-size: 1.75rem;
+    }
+}

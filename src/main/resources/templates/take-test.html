@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${test.name} + ' - Algebra 1 Recap'">Take Test</title>
+    <link rel="stylesheet" th:href="@{/css/app.css}">
+    <link rel="stylesheet" th:href="@{/css/nav.css}">
+</head>
+<body>
+    <div class="app-layout">
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>📐 Algebra 1</h2>
+            </div>
+            <ul class="nav-links">
+                <li><a th:href="@{/lessons}">🎓 Lessons</a></li>
+                <li><a th:href="@{/quiz}">✏️ Practice</a></li>
+                <li class="active"><a th:href="@{/tests}">📝 Tests</a></li>
+                <li><a th:href="@{/badges}">🏆 Badges</a></li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <a th:href="@{/tests}" class="back-link">← Back to Tests</a>
+                <div class="profile-section" th:if="${currentUser}">
+                    <span class="avatar" th:if="${currentUser.avatarType == 'emoji'}" th:text="${currentUser.avatar}"></span>
+                    <img th:if="${currentUser.avatarType == 'image'}" th:src="${currentUser.avatar}" class="avatar-img" alt="Avatar">
+                    <span class="display-name" th:text="${currentUser.displayName}"></span>
+                    <a th:href="@{/logout}" class="sign-out">Sign Out</a>
+                </div>
+            </header>
+
+            <div class="test-take-container">
+                <div class="test-info-header">
+                    <h1 th:text="${test.name}"></h1>
+                    <div class="test-meta">
+                        <span class="page-indicator" th:text="'Page ' + (${currentPage} + 1) + ' of ' + ${totalPages}"></span>
+                        <span class="question-count" th:text="${totalQuestions} + ' questions total'"></span>
+                    </div>
+                </div>
+
+                <form th:action="@{/tests/{id}/save-answers(id=${test.id})}" method="post" id="testForm">
+                    <div th:each="question, iterStat : ${questions}" class="question-card test-question">
+                        <div class="question-header">
+                            <span class="question-num" th:text="'Question ' + (${currentPage} * 5 + ${iterStat.index} + 1)"></span>
+                        </div>
+                        <p class="question-text" th:text="${question.questionText}"></p>
+
+                        <div class="radio-choices">
+                            <label class="radio-choice">
+                                <input type="radio" th:name="'answer_' + ${question.id}" value="A">
+                                <span class="radio-label"><strong>A.</strong> <span th:text="${question.optionA}"></span></span>
+                            </label>
+                            <label class="radio-choice">
+                                <input type="radio" th:name="'answer_' + ${question.id}" value="B">
+                                <span class="radio-label"><strong>B.</strong> <span th:text="${question.optionB}"></span></span>
+                            </label>
+                            <label class="radio-choice">
+                                <input type="radio" th:name="'answer_' + ${question.id}" value="C">
+                                <span class="radio-label"><strong>C.</strong> <span th:text="${question.optionC}"></span></span>
+                            </label>
+                            <label class="radio-choice">
+                                <input type="radio" th:name="'answer_' + ${question.id}" value="D">
+                                <span class="radio-label"><strong>D.</strong> <span th:text="${question.optionD}"></span></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Pagination / Submit -->
+                    <div class="test-navigation">
+                        <a th:if="${currentPage > 0}"
+                           th:href="@{/tests/{id}(id=${test.id}, page=${currentPage - 1})}"
+                           class="page-btn">← Previous</a>
+                        <span th:if="${currentPage == 0}"></span>
+
+                        <button th:if="${currentPage == totalPages - 1}" type="submit" class="btn btn-primary submit-test-btn">
+                            Submit Test
+                        </button>
+                        <a th:if="${currentPage < totalPages - 1}"
+                           th:href="@{/tests/{id}(id=${test.id}, page=${currentPage + 1})}"
+                           class="page-btn">Next →</a>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,192 @@
+/* Parent Theme Overrides */
+.parent-theme .sidebar,
+.parent-sidebar {
+    background: linear-gradient(180deg, #00b894 0%, #55efc4 100%);
+}
+
+.parent-theme .nav-links li.active a {
+    border-left-color: white;
+}
+
+/* Dashboard Container */
+.dashboard-container {
+    padding: 2rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee;
+}
+
+.stat-icon {
+    font-size: 2rem;
+    background: #e6fff9;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3436;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #636e72;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Student Summaries */
+.student-summaries {
+    margin-bottom: 2.5rem;
+}
+
+.student-summaries h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+    color: #2d3436;
+}
+
+.student-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+}
+
+.student-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee;
+}
+
+.student-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.student-avatar {
+    font-size: 2rem;
+}
+
+.student-avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.student-info h3 {
+    font-size: 1rem;
+    color: #2d3436;
+}
+
+.student-username {
+    font-size: 0.8rem;
+    color: #636e72;
+}
+
+.student-stats {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mini-stat {
+    text-align: center;
+}
+
+.mini-value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #00b894;
+}
+
+.mini-label {
+    font-size: 0.75rem;
+    color: #636e72;
+    text-transform: uppercase;
+}
+
+/* Recent Activity */
+.recent-activity h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.25rem;
+    color: #2d3436;
+}
+
+.activity-list {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border: 1px solid #eee;
+    overflow: hidden;
+}
+
+.activity-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+    transition: background 0.2s;
+}
+
+.activity-item:last-child {
+    border-bottom: none;
+}
+
+.activity-item:hover {
+    background: #f8f8f8;
+}
+
+.activity-avatar {
+    font-size: 1.5rem;
+}
+
+.activity-details p {
+    font-size: 0.9rem;
+    color: #2d3436;
+    margin-bottom: 0.25rem;
+}
+
+.activity-meta {
+    font-size: 0.8rem;
+    color: #636e72;
+}
+
+.no-activity {
+    padding: 2rem;
+    text-align: center;
+    color: #636e72;
+}
