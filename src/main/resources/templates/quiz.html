@@ -36,6 +36,14 @@
             </header>
 
             <div class="questions-container">
+                <!-- Progress -->
+                <div class="progress-bar-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" th:style="'width:' + ${totalPages > 0 ? ((currentPage + 1) * 100 / totalPages) : 0} + '%'"></div>
+                    </div>
+                    <span class="progress-text" th:text="'Page ' + (${currentPage} + 1) + ' of ' + ${totalPages} + ' (' + ${totalQuestions} + ' questions)'"></span>
+                </div>
+
                 <div th:each="question, iterStat : ${questions}" class="question-card" th:id="'question-' + ${question.id}">
                     <div class="question-header">
                         <span class="lesson-tag" th:text="${question.lessonTitle}"></span>

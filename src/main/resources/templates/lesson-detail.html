@@ -65,8 +65,8 @@
 
                 <!-- Sections -->
                 <div th:each="section : ${lesson.sections}" class="lesson-section">
-                    <h2 th:if="${!section.heading.equals(lesson.title)}" th:text="${section.heading}"></h2>
-                    <div class="section-explanation" th:text="${section.explanation}"></div>
+                    <h2 th:if="${!section.heading.equals(lesson.title) and !section.heading.equals('Concepts and Examples')}" th:text="${section.heading}"></h2>
+                    <div th:if="${!section.explanation.equals(lesson.description)}" class="section-explanation" th:text="${section.explanation}"></div>
 
                     <!-- Illustration -->
                     <div th:if="${section.illustration}" class="section-illustration" th:utext="${section.illustration}"></div>
