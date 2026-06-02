@@ -82,8 +82,25 @@
 
                 <!-- Pagination -->
                 <div class="pagination" th:if="${totalPages > 1}">
-                    <a th:if="${currentPage > 0}" th:href="@{/quiz(page=${currentPage - 1})}" class="page-btn">← Previous</a>
-                    <span class="page-info" th:text="'Page ' + (${currentPage} + 1) + ' of ' + ${totalPages}"></span>
+                    <a th:if="${currentPage > 0}" th:href="@{/quiz(page=${currentPage - 1})}" class="page-btn">← Prev</a>
+
+                    <!-- First page -->
+                    <a th:if="${currentPage > 2}" th:href="@{/quiz(page=0)}" class="page-num">1</a>
+                    <span th:if="${currentPage > 3}" class="page-dots">...</span>
+
+                    <!-- Page number links -->
+                    <th:block th:each="i : ${#numbers.sequence(0, totalPages - 1)}">
+                        <a th:if="${i >= currentPage - 2 and i <= currentPage + 2}"
+                           th:href="@{/quiz(page=${i})}"
+                           th:text="${i + 1}"
+                           th:classappend="${i == currentPage} ? 'active' : ''"
+                           class="page-num"></a>
+                    </th:block>
+
+                    <!-- Last page -->
+                    <span th:if="${currentPage < totalPages - 4}" class="page-dots">...</span>
+                    <a th:if="${currentPage < totalPages - 3}" th:href="@{/quiz(page=${totalPages - 1})}" class="page-num" th:text="${totalPages}"></a>
+
                     <a th:if="${currentPage < totalPages - 1}" th:href="@{/quiz(page=${currentPage + 1})}" class="page-btn">Next →</a>
                 </div>
             </div>
