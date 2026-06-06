@@ -17,7 +17,8 @@
             <ul class="nav-links">
                 <li><a th:href="@{/lessons}">🎓 Lessons</a></li>
                 <li><a th:href="@{/quiz}">✏️ Practice Test</a></li>
-                <li class="active"><a th:href="@{/tests}">📝 Tests</a></li>
+                <li><a th:href="@{/tests}">📝 Tests</a></li>
+                <li><a th:href="@{/olympiad}">🏅 Olympiad</a></li>
                 <li><a th:href="@{/badges}">🏆 Badges</a></li>
             </ul>
         </nav>
@@ -40,10 +41,16 @@
                 <div class="score-card">
                     <h2 th:text="${test.name}"></h2>
                     <div class="score-display">
-                        <div class="score-circle">
+                        <div class="score-circle" th:if="${result != null}">
+                            <span class="score-number" th:text="${result.score} + ' / ' + ${result.totalQuestions}"></span>
+                            <span class="score-percent" th:text="'(' + ${#numbers.formatDecimal(result.percentage, 0, 1)} + '%)'"></span>
+                        </div>
+                        <div class="score-circle" th:if="${result == null}">
                             <span class="score-emoji">🎯</span>
                         </div>
-                        <p class="score-text">Test Completed!</p>
+                        <p class="score-text" th:if="${result != null and result.passed}">✅ Passed! Great job!</p>
+                        <p class="score-text" th:if="${result != null and !result.passed}">Keep practicing — you'll get there!</p>
+                        <p class="score-text" th:if="${result == null}">Test Completed!</p>
                     </div>
                 </div>
 
@@ -58,25 +65,37 @@
                     </div>
                 </div>
 
-                <!-- Review Section -->
-                <div class="review-section">
-                    <h3>📋 Question Review</h3>
-                    <div th:each="question, iterStat : ${questions}" class="review-card">
+                <!-- Review Section — Only Incorrect Answers -->
+                <div class="review-section" th:if="${!questions.isEmpty()}">
+                    <h3>❌ Review Incorrect Answers (<span th:text="${questions.size()}"></span>)</h3>
+                    <div th:each="question, iterStat : ${questions}" class="review-card incorrect">
                         <div class="review-question">
-                            <span class="review-num" th:text="'Q' + (${iterStat.index} + 1)"></span>
+                            <span class="review-num">❌</span>
                             <p th:text="${question.questionText}"></p>
+                            <div th:if="${question.illustration != null and !question.illustration.isEmpty()}" class="question-illustration" th:utext="${question.illustration}"></div>
                         </div>
                         <div class="review-answer">
-                            <span class="correct-answer">Correct: <strong th:text="${question.correctAnswer}"></strong></span>
+                            <span class="correct-answer">✅ Correct Answer: <strong th:text="${question.correctAnswer}"></strong></span>
+                            <span class="correct-answer-text" th:switch="${question.correctAnswer}">
+                                <span th:case="'A'" th:text="' — ' + ${question.optionA}"></span>
+                                <span th:case="'B'" th:text="' — ' + ${question.optionB}"></span>
+                                <span th:case="'C'" th:text="' — ' + ${question.optionC}"></span>
+                                <span th:case="'D'" th:text="' — ' + ${question.optionD}"></span>
+                            </span>
                         </div>
                         <div th:if="${question.solutionExplanation}" class="review-explanation">
-                            <p th:text="${question.solutionExplanation}"></p>
+                            <p><strong>Solution:</strong> <span th:text="${question.solutionExplanation}"></span></p>
                         </div>
                     </div>
                 </div>
 
+                <div class="review-section" th:if="${questions.isEmpty() and result != null}">
+                    <h3>🎉 Perfect Score! All answers correct!</h3>
+                </div>
+
                 <div class="result-actions">
-                    <a th:href="@{/tests}" class="btn btn-primary">Back to Tests</a>
+                    <a th:href="@{/tests/{id}(id=${test.id})}" class="btn btn-primary">Retake Test</a>
+                    <a th:href="@{/tests}" class="btn btn-secondary">Back to Tests</a>
                     <a th:href="@{/badges}" class="btn btn-secondary">View All Badges</a>
                 </div>
             </div>

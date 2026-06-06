@@ -27,6 +27,9 @@ public class TestQuestion {
     @Column(length = 1000)
     private String solutionExplanation;
 
+    @Column(length = 5000)
+    private String illustration;
+
     public TestQuestion() {}
 
     public Long getId() { return id; }
@@ -49,4 +52,6 @@ public class TestQuestion {
     public void setHint(String hint) { this.hint = hint; }
     public String getSolutionExplanation() { return solutionExplanation; }
     public void setSolutionExplanation(String solutionExplanation) { this.solutionExplanation = solutionExplanation; }
+    public String getIllustration() { return illustration; }
+    public void setIllustration(String illustration) { this.illustration = illustration; }
 }

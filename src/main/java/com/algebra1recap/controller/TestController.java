@@ -28,13 +28,23 @@ public class TestController {
 
     @GetMapping("/tests")
     public String listTests(Model model, Authentication authentication) {
-        List<Test> allTests = testService.getAllTests();
+        List<Test> allTests = testService.getAllTests().stream()
+                .filter(t -> !"olympiad".equals(t.getCategory()))
+                .collect(Collectors.toList());
         Map<String, List<Test>> testsByDifficulty = allTests.stream()
                 .collect(Collectors.groupingBy(t -> t.getDifficulty().name(),
                         LinkedHashMap::new, Collectors.toList()));
         model.addAttribute("testsByDifficulty", testsByDifficulty);
         addUserAttributes(model, authentication);
         return "tests";
+    }
+
+    @GetMapping("/olympiad")
+    public String listOlympiad(Model model, Authentication authentication) {
+        List<Test> olympiadTests = testService.getTestsByCategory("olympiad");
+        model.addAttribute("olympiadTests", olympiadTests);
+        addUserAttributes(model, authentication);
+        return "olympiad";
     }
 
     @GetMapping("/tests/{id}")
@@ -88,8 +98,29 @@ public class TestController {
         List<TestQuestion> questions = testService.getAllTestQuestions(id);
         List<Badge> userBadges = badgeService.getUserBadges(user.getId());
 
+        // Get the result for score display
+        TestResult result = null;
+        if (resultId != null) {
+            result = testService.getTestResultById(resultId).orElse(null);
+        }
+
+        // Get only incorrect questions if result exists
+        List<TestQuestion> incorrectQuestions = questions;
+        if (result != null) {
+            Map<Long, String> userAnswers = testService.getUserAnswers(resultId);
+            incorrectQuestions = questions.stream()
+                    .filter(q -> {
+                        String userAnswer = userAnswers.get(q.getId());
+                        return userAnswer == null || !userAnswer.equalsIgnoreCase(q.getCorrectAnswer());
+                    })
+                    .collect(Collectors.toList());
+            model.addAttribute("userAnswers", userAnswers);
+        }
+
         model.addAttribute("test", test);
-        model.addAttribute("questions", questions);
+        model.addAttribute("questions", incorrectQuestions);
+        model.addAttribute("allQuestions", questions);
+        model.addAttribute("result", result);
         model.addAttribute("badges", userBadges);
         addUserAttributes(model, authentication);
         return "test-result";

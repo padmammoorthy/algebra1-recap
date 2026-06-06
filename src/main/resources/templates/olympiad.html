@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tests - Algebra 1 Recap</title>
+    <title>Olympiad - Algebra 1 Recap</title>
     <link rel="stylesheet" th:href="@{/css/app.css}">
     <link rel="stylesheet" th:href="@{/css/nav.css}">
 </head>
@@ -17,8 +17,8 @@
             <ul class="nav-links">
                 <li><a th:href="@{/lessons}">🎓 Lessons</a></li>
                 <li><a th:href="@{/quiz}">✏️ Practice Test</a></li>
-                <li class="active"><a th:href="@{/tests}">📝 Tests</a></li>
-                <li><a th:href="@{/olympiad}">🏅 Olympiad</a></li>
+                <li><a th:href="@{/tests}">📝 Tests</a></li>
+                <li class="active"><a th:href="@{/olympiad}">🏅 Olympiad</a></li>
                 <li><a th:href="@{/badges}">🏆 Badges</a></li>
             </ul>
         </nav>
@@ -27,7 +27,7 @@
         <main class="main-content">
             <!-- Top Bar -->
             <header class="top-bar">
-                <h1>Tests</h1>
+                <h1>🏅 Olympiad</h1>
                 <div class="profile-section" th:if="${currentUser}">
                     <span class="avatar" th:if="${currentUser.avatarType == 'emoji'}" th:text="${currentUser.avatar}"></span>
                     <img th:if="${currentUser.avatarType == 'image'}" th:src="${currentUser.avatar}" class="avatar-img" alt="Avatar">
@@ -37,24 +37,20 @@
             </header>
 
             <div class="tests-container">
-                <div th:each="entry : ${testsByDifficulty}" class="difficulty-section">
-                    <h2 class="difficulty-title">
-                        <span th:if="${entry.key == 'EASY'}" class="difficulty-badge easy">🟢 Easy</span>
-                        <span th:if="${entry.key == 'MEDIUM'}" class="difficulty-badge medium">🟡 Medium</span>
-                        <span th:if="${entry.key == 'HARD'}" class="difficulty-badge hard">🔴 Hard</span>
-                    </h2>
-                    <div class="test-cards-grid">
-                        <a th:each="test : ${entry.value}"
-                           th:href="@{/tests/{id}(id=${test.id})}"
-                           class="test-card">
-                            <div class="test-card-header">
-                                <h3 th:text="${test.name}"></h3>
-                                <span class="test-category" th:text="${test.category}"></span>
-                            </div>
-                            <p th:text="${test.description}"></p>
-                            <span class="test-card-action">Start Test →</span>
-                        </a>
-                    </div>
+                <div class="olympiad-intro">
+                    <p>Challenge yourself with Olympiad-level problems from Envision Algebra 1. These tests cover multi-step equations, special cases, and real-world applications.</p>
+                </div>
+                <div class="test-cards-grid">
+                    <a th:each="test : ${olympiadTests}"
+                       th:href="@{/tests/{id}(id=${test.id})}"
+                       class="test-card olympiad-card">
+                        <div class="test-card-header">
+                            <h3 th:text="${test.name}"></h3>
+                            <span class="test-category olympiad-badge">🏅 Olympiad</span>
+                        </div>
+                        <p th:text="${test.description}"></p>
+                        <span class="test-card-action">Start Challenge →</span>
+                    </a>
                 </div>
             </div>
         </main>

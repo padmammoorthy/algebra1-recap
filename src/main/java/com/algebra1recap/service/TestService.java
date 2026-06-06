@@ -7,6 +7,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 @Service
 public class TestService {
@@ -15,11 +16,14 @@ public class TestService {
     private final TestRepository testRepository;
     private final TestQuestionRepository testQuestionRepository;
     private final TestResultRepository testResultRepository;
+    private final UserAnswerRepository userAnswerRepository;
 
-    public TestService(TestRepository testRepository, TestQuestionRepository testQuestionRepository, TestResultRepository testResultRepository) {
+    public TestService(TestRepository testRepository, TestQuestionRepository testQuestionRepository,
+                       TestResultRepository testResultRepository, UserAnswerRepository userAnswerRepository) {
         this.testRepository = testRepository;
         this.testQuestionRepository = testQuestionRepository;
         this.testResultRepository = testResultRepository;
+        this.userAnswerRepository = userAnswerRepository;
     }
 
     public List<Test> getAllTests() { return testRepository.findAll(); }
@@ -41,6 +45,15 @@ public class TestService {
         return (int) Math.ceil((double) count / QUESTIONS_PER_PAGE);
     }
 
+    public Optional<TestResult> getTestResultById(Long resultId) {
+        return testResultRepository.findById(resultId);
+    }
+
+    public Map<Long, String> getUserAnswers(Long resultId) {
+        return userAnswerRepository.findByResultId(resultId).stream()
+                .collect(Collectors.toMap(UserAnswer::getQuestionId, UserAnswer::getUserAnswer));
+    }
+
     public TestResult gradeAndSaveTest(Long userId, Long testId, Map<Long, String> answers) {
         List<TestQuestion> questions = getAllTestQuestions(testId);
         int score = 0;
@@ -53,6 +66,14 @@ public class TestService {
         int totalQuestions = questions.size();
         boolean passed = totalQuestions > 0 && ((double) score / totalQuestions) >= 0.7;
         TestResult result = new TestResult(userId, testId, score, totalQuestions, passed);
-        return testResultRepository.save(result);
+        result = testResultRepository.save(result);
+
+        // Save individual answers for review
+        for (Map.Entry<Long, String> entry : answers.entrySet()) {
+            UserAnswer ua = new UserAnswer(result.getId(), entry.getKey(), entry.getValue());
+            userAnswerRepository.save(ua);
+        }
+
+        return result;
     }
 }

@@ -18,6 +18,7 @@
                 <li><a th:href="@{/lessons}">🎓 Lessons</a></li>
                 <li><a th:href="@{/quiz}">✏️ Practice Test</a></li>
                 <li class="active"><a th:href="@{/tests}">📝 Tests</a></li>
+                <li><a th:href="@{/olympiad}">🏅 Olympiad</a></li>
                 <li><a th:href="@{/badges}">🏆 Badges</a></li>
             </ul>
         </nav>
@@ -50,6 +51,7 @@
                             <span class="question-num" th:text="'Question ' + (${currentPage} * 5 + ${iterStat.index} + 1)"></span>
                         </div>
                         <p class="question-text" th:text="${question.questionText}"></p>
+                        <div th:if="${question.illustration != null and !question.illustration.isEmpty()}" class="question-illustration" th:utext="${question.illustration}"></div>
 
                         <div class="radio-choices">
                             <label class="radio-choice">
@@ -71,11 +73,14 @@
                         </div>
                     </div>
 
+                    <!-- Hidden fields for answers from other pages -->
+                    <div id="hiddenAnswers"></div>
+
                     <!-- Pagination / Submit -->
                     <div class="test-navigation">
                         <a th:if="${currentPage > 0}"
                            th:href="@{/tests/{id}(id=${test.id}, page=${currentPage - 1})}"
-                           class="page-btn">← Previous</a>
+                           class="page-btn" onclick="saveCurrentAnswers()">← Previous</a>
                         <span th:if="${currentPage == 0}"></span>
 
                         <button th:if="${currentPage == totalPages - 1}" type="submit" class="btn btn-primary submit-test-btn">
@@ -83,9 +88,71 @@
                         </button>
                         <a th:if="${currentPage < totalPages - 1}"
                            th:href="@{/tests/{id}(id=${test.id}, page=${currentPage + 1})}"
-                           class="page-btn">Next →</a>
+                           class="page-btn" onclick="saveCurrentAnswers()">Next →</a>
                     </div>
                 </form>
+
+                <script th:inline="javascript">
+                    var testId = /*[[${test.id}]]*/ 0;
+                    var storageKey = 'test_answers_' + testId;
+
+                    // Load saved answers for current page questions
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+                        var radios = document.querySelectorAll('input[type="radio"]');
+                        radios.forEach(function(radio) {
+                            var name = radio.getAttribute('name');
+                            if (saved[name] === radio.value) {
+                                radio.checked = true;
+                            }
+                        });
+
+                        // Add hidden inputs for answers from other pages
+                        var hiddenDiv = document.getElementById('hiddenAnswers');
+                        var currentNames = new Set();
+                        radios.forEach(function(r) { currentNames.add(r.getAttribute('name')); });
+                        for (var key in saved) {
+                            if (!currentNames.has(key)) {
+                                var input = document.createElement('input');
+                                input.type = 'hidden';
+                                input.name = key;
+                                input.value = saved[key];
+                                hiddenDiv.appendChild(input);
+                            }
+                        }
+                    });
+
+                    function saveCurrentAnswers() {
+                        var saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+                        var radios = document.querySelectorAll('input[type="radio"]:checked');
+                        radios.forEach(function(radio) {
+                            saved[radio.getAttribute('name')] = radio.value;
+                        });
+                        localStorage.setItem(storageKey, JSON.stringify(saved));
+                    }
+
+                    // Save answers before form submit and clear storage
+                    document.getElementById('testForm').addEventListener('submit', function() {
+                        saveCurrentAnswers();
+                        // Add all stored answers as hidden fields
+                        var saved = JSON.parse(localStorage.getItem(storageKey) || '{}');
+                        var hiddenDiv = document.getElementById('hiddenAnswers');
+                        hiddenDiv.innerHTML = '';
+                        var currentRadios = document.querySelectorAll('input[type="radio"]');
+                        var currentNames = new Set();
+                        currentRadios.forEach(function(r) { currentNames.add(r.getAttribute('name')); });
+                        for (var key in saved) {
+                            if (!currentNames.has(key)) {
+                                var input = document.createElement('input');
+                                input.type = 'hidden';
+                                input.name = key;
+                                input.value = saved[key];
+                                hiddenDiv.appendChild(input);
+                            }
+                        }
+                        localStorage.removeItem(storageKey);
+                    });
+                </script>
             </div>
         </main>
     </div>
