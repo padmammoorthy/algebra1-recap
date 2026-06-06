@@ -83,6 +83,15 @@
                            class="page-btn" onclick="saveCurrentAnswers()">← Previous</a>
                         <span th:if="${currentPage == 0}"></span>
 
+                        <div class="page-links">
+                            <th:block th:each="i : ${#numbers.sequence(0, totalPages - 1)}">
+                                <a th:href="@{/tests/{id}(id=${test.id}, page=${i})}"
+                                   th:text="${i + 1}"
+                                   th:classappend="${i == currentPage} ? 'active' : ''"
+                                   class="page-num" onclick="saveCurrentAnswers()"></a>
+                            </th:block>
+                        </div>
+
                         <button th:if="${currentPage == totalPages - 1}" type="submit" class="btn btn-primary submit-test-btn">
                             Submit Test
                         </button>

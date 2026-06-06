@@ -506,3 +506,45 @@ a {
     font-size: 0.85rem;
     font-style: italic;
 }
+
+/* Test page number links */
+.test-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+}
+
+.page-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    justify-content: center;
+}
+
+.page-links .page-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    color: #636e72;
+    background: #f1f2f6;
+    transition: all 0.2s;
+}
+
+.page-links .page-num:hover {
+    background: #dfe6e9;
+    color: #2d3436;
+}
+
+.page-links .page-num.active {
+    background: #6c5ce7;
+    color: #fff;
+    font-weight: 600;
+}
