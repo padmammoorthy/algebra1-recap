@@ -30,7 +30,12 @@ public class TestDataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        if (testRepository.count() > 0) return;
+        // Only reload tests/test questions if none exist.
+        // User data (app_user, test_result, user_answer, badge) is NEVER touched.
+        if (testRepository.count() > 0) {
+            System.out.println("Tests already loaded, skipping. User data preserved.");
+            return;
+        }
 
         // Create 9 tests: 3 easy, 3 medium, 3 hard + 1 olympiad
         List<Test> tests = new ArrayList<>(List.of(

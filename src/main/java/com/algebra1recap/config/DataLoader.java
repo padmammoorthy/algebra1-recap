@@ -24,13 +24,23 @@ public class DataLoader implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        if (questionRepository.count() > 0) return;
+        // Only reloads practice questions (the 'question' table).
+        // NEVER touches user data (app_user, test_result, user_answer, badge).
         try {
             ObjectMapper mapper = new ObjectMapper();
             InputStream is = new ClassPathResource("data/questions.json").getInputStream();
             List<Question> questions = mapper.readValue(is, new TypeReference<List<Question>>() {});
+
+            long currentCount = questionRepository.count();
+            if (currentCount == questions.size()) {
+                System.out.println("Practice questions already up to date (" + currentCount + ")");
+                return;
+            }
+
+            // Questions changed — reload only the question table (user data untouched)
+            questionRepository.deleteAll();
             questionRepository.saveAll(questions);
-            System.out.println("Loaded " + questions.size() + " practice questions");
+            System.out.println("Reloaded " + questions.size() + " practice questions (was " + currentCount + "). User data preserved.");
         } catch (Exception e) {
             System.err.println("Failed to load questions: " + e.getMessage());
         }
