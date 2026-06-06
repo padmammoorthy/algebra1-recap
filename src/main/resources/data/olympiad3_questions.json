@@ -1,0 +1,202 @@
+[
+ {
+  "questionText": "Solve for y: x + y = 15",
+  "optionA": "y = 15 - x",
+  "optionB": "y = x - 15",
+  "optionC": "y = 15x",
+  "optionD": "y = x + 15",
+  "correctAnswer": "A",
+  "hint": "Subtract x from both sides",
+  "solutionExplanation": "y = 15 - x"
+ },
+ {
+  "questionText": "Solve for x: y = mx + b",
+  "optionA": "x = (y - b)/m",
+  "optionB": "x = y/m + b",
+  "optionC": "x = (y + b)/m",
+  "optionD": "x = ym - b",
+  "correctAnswer": "A",
+  "hint": "Subtract b, divide by m",
+  "solutionExplanation": "y - b = mx, x = (y - b)/m"
+ },
+ {
+  "questionText": "Solve for w: P = 2l + 2w",
+  "optionA": "w = (P - 2l)/2",
+  "optionB": "w = P - 2l",
+  "optionC": "w = P/2 + l",
+  "optionD": "w = (P + 2l)/2",
+  "correctAnswer": "A",
+  "hint": "Subtract 2l, divide by 2",
+  "solutionExplanation": "P - 2l = 2w, w = (P - 2l)/2"
+ },
+ {
+  "questionText": "Solve for b: A = bh",
+  "optionA": "b = A/h",
+  "optionB": "b = Ah",
+  "optionC": "b = h/A",
+  "optionD": "b = A - h",
+  "correctAnswer": "A",
+  "hint": "Divide both sides by h",
+  "solutionExplanation": "b = A/h"
+ },
+ {
+  "questionText": "Solve for r: d = rt",
+  "optionA": "r = d/t",
+  "optionB": "r = dt",
+  "optionC": "r = t/d",
+  "optionD": "r = d - t",
+  "correctAnswer": "A",
+  "hint": "Divide both sides by t",
+  "solutionExplanation": "r = d/t"
+ },
+ {
+  "questionText": "Solve for h: V = πr²h",
+  "optionA": "h = V/(πr²)",
+  "optionB": "h = Vπr²",
+  "optionC": "h = πr²/V",
+  "optionD": "h = V - πr²",
+  "correctAnswer": "A",
+  "hint": "Divide both sides by πr²",
+  "solutionExplanation": "h = V/(πr²)"
+ },
+ {
+  "questionText": "Solve for C: F = (9/5)C + 32",
+  "optionA": "C = 5(F - 32)/9",
+  "optionB": "C = 9(F - 32)/5",
+  "optionC": "C = (F - 32)/9",
+  "optionD": "C = 5F/9 - 32",
+  "correctAnswer": "A",
+  "hint": "Subtract 32, multiply by 5/9",
+  "solutionExplanation": "F - 32 = (9/5)C, C = 5(F-32)/9"
+ },
+ {
+  "questionText": "Solve for t: I = Prt",
+  "optionA": "t = I/(Pr)",
+  "optionB": "t = IPr",
+  "optionC": "t = Pr/I",
+  "optionD": "t = I - Pr",
+  "correctAnswer": "A",
+  "hint": "Divide both sides by Pr",
+  "solutionExplanation": "t = I/(Pr)"
+ },
+ {
+  "questionText": "Solve for x: ax - b = c",
+  "optionA": "x = (c + b)/a",
+  "optionB": "x = c/a - b",
+  "optionC": "x = (c - b)/a",
+  "optionD": "x = a/(c + b)",
+  "correctAnswer": "A",
+  "hint": "Add b, divide by a",
+  "solutionExplanation": "ax = c + b, x = (c + b)/a"
+ },
+ {
+  "questionText": "Solve for y: 3x - 4y = 12",
+  "optionA": "y = (3x - 12)/4",
+  "optionB": "y = (12 - 3x)/4",
+  "optionC": "y = 3x/4 + 3",
+  "optionD": "y = 12/(3x - 4)",
+  "correctAnswer": "A",
+  "hint": "Subtract 3x, divide by -4",
+  "solutionExplanation": "-4y = 12 - 3x, y = (3x - 12)/4"
+ },
+ {
+  "questionText": "Solve for g: 2g + h = k",
+  "optionA": "g = (k - h)/2",
+  "optionB": "g = k/2 + h",
+  "optionC": "g = (k + h)/2",
+  "optionD": "g = k - h - 2",
+  "correctAnswer": "A",
+  "hint": "Subtract h, divide by 2",
+  "solutionExplanation": "2g = k - h, g = (k - h)/2"
+ },
+ {
+  "questionText": "Solve for v: E = (1/2)mv²",
+  "optionA": "v = √(2E/m)",
+  "optionB": "v = 2E/m",
+  "optionC": "v = E/(2m)",
+  "optionD": "v = √(E/2m)",
+  "correctAnswer": "A",
+  "hint": "Multiply by 2, divide by m, take square root",
+  "solutionExplanation": "2E = mv², v² = 2E/m, v = √(2E/m)"
+ },
+ {
+  "questionText": "Solve for R: P = V²/R",
+  "optionA": "R = V²/P",
+  "optionB": "R = P/V²",
+  "optionC": "R = PV²",
+  "optionD": "R = V²P",
+  "correctAnswer": "A",
+  "hint": "Multiply by R, divide by P",
+  "solutionExplanation": "PR = V², R = V²/P"
+ },
+ {
+  "questionText": "Solve for a: S = (n/2)(a + l)",
+  "optionA": "a = 2S/n - l",
+  "optionB": "a = S/(2n) - l",
+  "optionC": "a = 2S/(n + l)",
+  "optionD": "a = Sn/2 - l",
+  "correctAnswer": "A",
+  "hint": "Multiply by 2/n, subtract l",
+  "solutionExplanation": "2S/n = a + l, a = 2S/n - l"
+ },
+ {
+  "questionText": "Solve for x: (x + y)/z = a",
+  "optionA": "x = az - y",
+  "optionB": "x = a/z - y",
+  "optionC": "x = (a - y)/z",
+  "optionD": "x = az + y",
+  "correctAnswer": "A",
+  "hint": "Multiply by z, subtract y",
+  "solutionExplanation": "x + y = az, x = az - y"
+ },
+ {
+  "questionText": "Solve for C: P = C + rC",
+  "optionA": "C = P/(1 + r)",
+  "optionB": "C = P - r",
+  "optionC": "C = P/(r - 1)",
+  "optionD": "C = (P - r)/C",
+  "correctAnswer": "A",
+  "hint": "Factor out C: P = C(1 + r)",
+  "solutionExplanation": "P = C(1 + r), C = P/(1 + r)"
+ },
+ {
+  "questionText": "Solve for x: ax + bx = c",
+  "optionA": "x = c/(a + b)",
+  "optionB": "x = (c - b)/a",
+  "optionC": "x = c/a + c/b",
+  "optionD": "x = (a + b)/c",
+  "correctAnswer": "A",
+  "hint": "Factor x: x(a + b) = c",
+  "solutionExplanation": "x(a + b) = c, x = c/(a + b)"
+ },
+ {
+  "questionText": "Solve for y: xy - 3y = 7",
+  "optionA": "y = 7/(x - 3)",
+  "optionB": "y = 7x - 3",
+  "optionC": "y = (7 + 3)/x",
+  "optionD": "y = 7/(x + 3)",
+  "correctAnswer": "A",
+  "hint": "Factor y: y(x - 3) = 7",
+  "solutionExplanation": "y(x - 3) = 7, y = 7/(x - 3)"
+ },
+ {
+  "questionText": "Solve for p: ap - b = cp + d",
+  "optionA": "p = (b + d)/(a - c)",
+  "optionB": "p = (d - b)/(a + c)",
+  "optionC": "p = (a - c)/(b + d)",
+  "optionD": "p = (b + d)/(c - a)",
+  "correctAnswer": "A",
+  "hint": "Move p terms to one side, factor",
+  "solutionExplanation": "ap - cp = b + d, p(a - c) = b + d, p = (b + d)/(a - c)"
+ },
+ {
+  "questionText": "Solve for x: x/a + x/b = 1",
+  "optionA": "x = ab/(a + b)",
+  "optionB": "x = (a + b)/ab",
+  "optionC": "x = a + b",
+  "optionD": "x = 1/(a + b)",
+  "correctAnswer": "A",
+  "hint": "Factor x, combine fractions with LCD ab",
+  "solutionExplanation": "x(b + a)/(ab) = 1, x = ab/(a + b)"
+ }
+]

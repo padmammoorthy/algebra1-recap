@@ -1,0 +1,502 @@
+[
+ {
+  "questionText": "Solve: x + 7 = 15",
+  "optionA": "x = 8",
+  "optionB": "x = 22",
+  "optionC": "x = -8",
+  "optionD": "x = 7",
+  "correctAnswer": "A",
+  "hint": "Subtract 7 from both sides",
+  "solutionExplanation": "x = 15 - 7 = 8"
+ },
+ {
+  "questionText": "Solve: y - 9 = -3",
+  "optionA": "y = -12",
+  "optionB": "y = 6",
+  "optionC": "y = 12",
+  "optionD": "y = -6",
+  "correctAnswer": "B",
+  "hint": "Add 9 to both sides",
+  "solutionExplanation": "y = -3 + 9 = 6"
+ },
+ {
+  "questionText": "Solve: 4m = 32",
+  "optionA": "m = 128",
+  "optionB": "m = 8",
+  "optionC": "m = 28",
+  "optionD": "m = 36",
+  "correctAnswer": "B",
+  "hint": "Divide both sides by 4",
+  "solutionExplanation": "m = 32 ÷ 4 = 8"
+ },
+ {
+  "questionText": "Solve: n/5 = -6",
+  "optionA": "n = -1.2",
+  "optionB": "n = -30",
+  "optionC": "n = 30",
+  "optionD": "n = -11",
+  "correctAnswer": "B",
+  "hint": "Multiply both sides by 5",
+  "solutionExplanation": "n = -6 × 5 = -30"
+ },
+ {
+  "questionText": "Solve: a - 12 = 0",
+  "optionA": "a = -12",
+  "optionB": "a = 0",
+  "optionC": "a = 12",
+  "optionD": "a = 24",
+  "correctAnswer": "C",
+  "hint": "Add 12 to both sides",
+  "solutionExplanation": "a = 0 + 12 = 12"
+ },
+ {
+  "questionText": "Solve: -8k = 56",
+  "optionA": "k = -7",
+  "optionB": "k = 7",
+  "optionC": "k = -48",
+  "optionD": "k = 64",
+  "correctAnswer": "A",
+  "hint": "Divide both sides by -8",
+  "solutionExplanation": "k = 56 ÷ (-8) = -7"
+ },
+ {
+  "questionText": "Solve: x + 4.5 = 9.2",
+  "optionA": "x = 13.7",
+  "optionB": "x = 4.7",
+  "optionC": "x = 5.3",
+  "optionD": "x = 4.5",
+  "correctAnswer": "B",
+  "hint": "Subtract 4.5 from both sides",
+  "solutionExplanation": "x = 9.2 - 4.5 = 4.7"
+ },
+ {
+  "questionText": "Solve: w - 1/3 = 2/3",
+  "optionA": "w = 1/3",
+  "optionB": "w = 3/3 = 1",
+  "optionC": "w = -1/3",
+  "optionD": "w = 2/9",
+  "correctAnswer": "B",
+  "hint": "Add 1/3 to both sides",
+  "solutionExplanation": "w = 2/3 + 1/3 = 3/3 = 1"
+ },
+ {
+  "questionText": "Solve: (-2/3)p = 8",
+  "optionA": "p = -12",
+  "optionB": "p = 12",
+  "optionC": "p = -16/3",
+  "optionD": "p = 5.33",
+  "correctAnswer": "A",
+  "hint": "Multiply both sides by -3/2",
+  "solutionExplanation": "p = 8 × (-3/2) = -12"
+ },
+ {
+  "questionText": "Solve: 14 = y + 20",
+  "optionA": "y = 34",
+  "optionB": "y = 6",
+  "optionC": "y = -6",
+  "optionD": "y = -34",
+  "correctAnswer": "C",
+  "hint": "Subtract 20 from both sides",
+  "solutionExplanation": "y = 14 - 20 = -6"
+ },
+ {
+  "questionText": "Solve: 2x + 5 = 15",
+  "optionA": "x = 10",
+  "optionB": "x = 5",
+  "optionC": "x = 20",
+  "optionD": "x = 7",
+  "correctAnswer": "B",
+  "hint": "Subtract 5, then divide by 2",
+  "solutionExplanation": "2x = 10, x = 5"
+ },
+ {
+  "questionText": "Solve: 3y - 7 = 14",
+  "optionA": "y = 3",
+  "optionB": "y = 21",
+  "optionC": "y = 7",
+  "optionD": "y = 2.33",
+  "correctAnswer": "C",
+  "hint": "Add 7, then divide by 3",
+  "solutionExplanation": "3y = 21, y = 7"
+ },
+ {
+  "questionText": "Solve: m/4 + 2 = 7",
+  "optionA": "m = 20",
+  "optionB": "m = 36",
+  "optionC": "m = 9",
+  "optionD": "m = 1.25",
+  "correctAnswer": "A",
+  "hint": "Subtract 2, then multiply by 4",
+  "solutionExplanation": "m/4 = 5, m = 20"
+ },
+ {
+  "questionText": "Solve: -5n - 3 = 12",
+  "optionA": "n = -3",
+  "optionB": "n = 3",
+  "optionC": "n = -9/5",
+  "optionD": "n = 15",
+  "correctAnswer": "A",
+  "hint": "Add 3, then divide by -5",
+  "solutionExplanation": "-5n = 15, n = -3"
+ },
+ {
+  "questionText": "Solve: 8 - 2a = -10",
+  "optionA": "a = -1",
+  "optionB": "a = 9",
+  "optionC": "a = -9",
+  "optionD": "a = 1",
+  "correctAnswer": "B",
+  "hint": "Subtract 8, then divide by -2",
+  "solutionExplanation": "-2a = -18, a = 9"
+ },
+ {
+  "questionText": "Solve: (k - 4)/3 = 5",
+  "optionA": "k = 19",
+  "optionB": "k = 3",
+  "optionC": "k = 11",
+  "optionD": "k = 9",
+  "correctAnswer": "A",
+  "hint": "Multiply by 3, then add 4",
+  "solutionExplanation": "k - 4 = 15, k = 19"
+ },
+ {
+  "questionText": "Solve: -6 + x/2 = -9",
+  "optionA": "x = -6",
+  "optionB": "x = 6",
+  "optionC": "x = -30",
+  "optionD": "x = -3",
+  "correctAnswer": "A",
+  "hint": "Add 6, then multiply by 2",
+  "solutionExplanation": "x/2 = -3, x = -6"
+ },
+ {
+  "questionText": "Solve: 4.2x - 1.5 = 6.9",
+  "optionA": "x = 1.29",
+  "optionB": "x = 2",
+  "optionC": "x = 5.4",
+  "optionD": "x = 0.5",
+  "correctAnswer": "B",
+  "hint": "Add 1.5, then divide by 4.2",
+  "solutionExplanation": "4.2x = 8.4, x = 2"
+ },
+ {
+  "questionText": "Solve: 11 = 3 - 4w",
+  "optionA": "w = -2",
+  "optionB": "w = 2",
+  "optionC": "w = -3.5",
+  "optionD": "w = 3.5",
+  "correctAnswer": "A",
+  "hint": "Subtract 3, then divide by -4",
+  "solutionExplanation": "8 = -4w, w = -2"
+ },
+ {
+  "questionText": "Solve: (2/5)y + 4 = 12",
+  "optionA": "y = 20",
+  "optionB": "y = 3.2",
+  "optionC": "y = 40",
+  "optionD": "y = 10",
+  "correctAnswer": "A",
+  "hint": "Subtract 4, then multiply by 5/2",
+  "solutionExplanation": "(2/5)y = 8, y = 8 × 5/2 = 20"
+ },
+ {
+  "questionText": "Solve: 3(x + 2) = 18",
+  "optionA": "x = 8",
+  "optionB": "x = 4",
+  "optionC": "x = 6",
+  "optionD": "x = 16/3",
+  "correctAnswer": "B",
+  "hint": "Distribute or divide by 3 first",
+  "solutionExplanation": "3x + 6 = 18, 3x = 12, x = 4"
+ },
+ {
+  "questionText": "Solve: -2(y - 5) = 14",
+  "optionA": "y = -2",
+  "optionB": "y = 2",
+  "optionC": "y = -12",
+  "optionD": "y = 12",
+  "correctAnswer": "A",
+  "hint": "Distribute the -2",
+  "solutionExplanation": "-2y + 10 = 14, -2y = 4, y = -2"
+ },
+ {
+  "questionText": "Solve: 4x + 2x - 7 = 17",
+  "optionA": "x = 10/6",
+  "optionB": "x = 4",
+  "optionC": "x = 24",
+  "optionD": "x = 2.4",
+  "correctAnswer": "B",
+  "hint": "Combine like terms first",
+  "solutionExplanation": "6x - 7 = 17, 6x = 24, x = 4"
+ },
+ {
+  "questionText": "Solve: 10m - 4 - 3m = 10",
+  "optionA": "m = 14/7",
+  "optionB": "m = 6/7",
+  "optionC": "m = 2",
+  "optionD": "m = 14",
+  "correctAnswer": "C",
+  "hint": "Combine like terms: 7m - 4 = 10",
+  "solutionExplanation": "7m = 14, m = 2"
+ },
+ {
+  "questionText": "Solve: 5(2k - 1) = 35",
+  "optionA": "k = 4",
+  "optionB": "k = 3",
+  "optionC": "k = 7",
+  "optionD": "k = 3.5",
+  "correctAnswer": "A",
+  "hint": "Distribute: 10k - 5 = 35",
+  "solutionExplanation": "10k = 40, k = 4"
+ },
+ {
+  "questionText": "Solve: 2(w + 4) + 3w = 23",
+  "optionA": "w = 15/5",
+  "optionB": "w = 3",
+  "optionC": "w = 5",
+  "optionD": "w = 23/5",
+  "correctAnswer": "B",
+  "hint": "Distribute and combine: 5w + 8 = 23",
+  "solutionExplanation": "2w + 8 + 3w = 23, 5w = 15, w = 3"
+ },
+ {
+  "questionText": "Solve: -4(3 - a) = 20",
+  "optionA": "a = 8",
+  "optionB": "a = -2",
+  "optionC": "a = -8",
+  "optionD": "a = 2",
+  "correctAnswer": "A",
+  "hint": "Distribute: -12 + 4a = 20",
+  "solutionExplanation": "4a = 32, a = 8"
+ },
+ {
+  "questionText": "Solve: x + 2(x - 3) = 9",
+  "optionA": "x = 5",
+  "optionB": "x = 3",
+  "optionC": "x = 15/3",
+  "optionD": "x = 1",
+  "correctAnswer": "A",
+  "hint": "Distribute: x + 2x - 6 = 9",
+  "solutionExplanation": "3x - 6 = 9, 3x = 15, x = 5"
+ },
+ {
+  "questionText": "Solve: (1/2)(4y - 8) = 10",
+  "optionA": "y = 7",
+  "optionB": "y = 14",
+  "optionC": "y = 3",
+  "optionD": "y = 28",
+  "correctAnswer": "A",
+  "hint": "Distribute or multiply both sides by 2",
+  "solutionExplanation": "2y - 4 = 10, 2y = 14, y = 7"
+ },
+ {
+  "questionText": "Solve: 7 = 2(3n + 1) - 1",
+  "optionA": "n = 1",
+  "optionB": "n = 3",
+  "optionC": "n = 6/6",
+  "optionD": "n = 2",
+  "correctAnswer": "A",
+  "hint": "Simplify right side: 7 = 6n + 2 - 1",
+  "solutionExplanation": "7 = 6n + 1, 6 = 6n, n = 1"
+ },
+ {
+  "questionText": "Solve: 5x + 4 = 3x + 12",
+  "optionA": "x = 8",
+  "optionB": "x = 4",
+  "optionC": "x = 2",
+  "optionD": "x = 16",
+  "correctAnswer": "B",
+  "hint": "Move variable terms to one side",
+  "solutionExplanation": "2x + 4 = 12, 2x = 8, x = 4"
+ },
+ {
+  "questionText": "Solve: 2y - 9 = 6y + 15",
+  "optionA": "y = -6",
+  "optionB": "y = 6",
+  "optionC": "y = -24/4",
+  "optionD": "y = 3",
+  "correctAnswer": "A",
+  "hint": "Move y terms to one side",
+  "solutionExplanation": "-4y = 24, y = -6"
+ },
+ {
+  "questionText": "Solve: 7m - 2 = 4m + 10",
+  "optionA": "m = 4",
+  "optionB": "m = 12/3",
+  "optionC": "m = 8/3",
+  "optionD": "m = 6",
+  "correctAnswer": "A",
+  "hint": "Subtract 4m from both sides",
+  "solutionExplanation": "3m - 2 = 10, 3m = 12, m = 4"
+ },
+ {
+  "questionText": "Solve: -3n + 8 = 2n - 7",
+  "optionA": "n = 3",
+  "optionB": "n = -3",
+  "optionC": "n = 15/5",
+  "optionD": "n = 1/5",
+  "correctAnswer": "A",
+  "hint": "Move n terms together",
+  "solutionExplanation": "8 + 7 = 5n, 15 = 5n, n = 3"
+ },
+ {
+  "questionText": "Solve: 4(k + 2) = 2k + 16",
+  "optionA": "k = 4",
+  "optionB": "k = 8",
+  "optionC": "k = 6",
+  "optionD": "k = 2",
+  "correctAnswer": "A",
+  "hint": "Distribute: 4k + 8 = 2k + 16",
+  "solutionExplanation": "2k = 8, k = 4"
+ },
+ {
+  "questionText": "Solve: 6 - 2w = 3w - 9",
+  "optionA": "w = 3",
+  "optionB": "w = -3",
+  "optionC": "w = 15/5",
+  "optionD": "w = 1",
+  "correctAnswer": "A",
+  "hint": "Move w terms to one side",
+  "solutionExplanation": "15 = 5w, w = 3"
+ },
+ {
+  "questionText": "Solve: 8a - 3 = 2(3a + 1)",
+  "optionA": "a = 5/2",
+  "optionB": "a = 2.5",
+  "optionC": "a = 1",
+  "optionD": "a = -5/2",
+  "correctAnswer": "A",
+  "hint": "Distribute: 8a - 3 = 6a + 2",
+  "solutionExplanation": "2a = 5, a = 5/2 = 2.5"
+ },
+ {
+  "questionText": "Solve: 5x - 7 = 5x + 3",
+  "optionA": "x = 10",
+  "optionB": "x = 0",
+  "optionC": "No solution",
+  "optionD": "x = -10",
+  "correctAnswer": "C",
+  "hint": "Subtract 5x from both sides",
+  "solutionExplanation": "-7 = 3 is false. No solution (contradiction)."
+ },
+ {
+  "questionText": "Solve: 3(2y - 4) = 6y - 12",
+  "optionA": "y = 0",
+  "optionB": "y = 4",
+  "optionC": "No solution",
+  "optionD": "Infinitely many solutions",
+  "correctAnswer": "D",
+  "hint": "Distribute: 6y - 12 = 6y - 12",
+  "solutionExplanation": "Both sides are identical — true for all y. Identity."
+ },
+ {
+  "questionText": "Solve: -2(x - 5) = 3(x + 5)",
+  "optionA": "x = 1",
+  "optionB": "x = -1",
+  "optionC": "x = 5",
+  "optionD": "x = -5",
+  "correctAnswer": "B",
+  "hint": "Distribute both sides: -2x + 10 = 3x + 15",
+  "solutionExplanation": "-5 = 5x, x = -1"
+ },
+ {
+  "questionText": "Determine: 4(x - 2) = 4x - 8",
+  "optionA": "x = 2",
+  "optionB": "No solution",
+  "optionC": "Infinitely many solutions",
+  "optionD": "x = 0",
+  "correctAnswer": "C",
+  "hint": "Distribute left side",
+  "solutionExplanation": "4x - 8 = 4x - 8. Identity — all reals."
+ },
+ {
+  "questionText": "Determine: 3(2y + 1) = 6y - 5",
+  "optionA": "y = -8/6",
+  "optionB": "No solution",
+  "optionC": "Infinitely many solutions",
+  "optionD": "y = 1",
+  "correctAnswer": "B",
+  "hint": "Distribute: 6y + 3 = 6y - 5",
+  "solutionExplanation": "3 = -5 is false. No solution."
+ },
+ {
+  "questionText": "Determine: 2(m + 3) - 4 = 2m + 2",
+  "optionA": "m = 0",
+  "optionB": "No solution",
+  "optionC": "m = 2",
+  "optionD": "Infinitely many solutions",
+  "correctAnswer": "D",
+  "hint": "Simplify left: 2m + 6 - 4 = 2m + 2",
+  "solutionExplanation": "2m + 2 = 2m + 2. Identity — all reals."
+ },
+ {
+  "questionText": "Determine: (3x + 6)/3 = x + 2",
+  "optionA": "x = 0",
+  "optionB": "x = 2",
+  "optionC": "No solution",
+  "optionD": "Infinitely many solutions",
+  "correctAnswer": "D",
+  "hint": "Simplify left side",
+  "solutionExplanation": "x + 2 = x + 2. Identity — all reals."
+ },
+ {
+  "questionText": "Solve: 5n - 2(n + 1) = 3n + 4",
+  "optionA": "n = 6",
+  "optionB": "No solution",
+  "optionC": "n = -6",
+  "optionD": "Infinitely many",
+  "correctAnswer": "B",
+  "hint": "Simplify: 3n - 2 = 3n + 4",
+  "solutionExplanation": "-2 = 4 is false. No solution."
+ },
+ {
+  "questionText": "Solve: 0.5(4x - 2) = x + 3",
+  "optionA": "x = 4",
+  "optionB": "x = 2",
+  "optionC": "No solution",
+  "optionD": "x = -4",
+  "correctAnswer": "A",
+  "hint": "Distribute: 2x - 1 = x + 3",
+  "solutionExplanation": "x = 4"
+ },
+ {
+  "questionText": "The length of a rectangle is 3 cm longer than its width. If the perimeter is 34 cm, what is the width?",
+  "optionA": "w = 7 cm",
+  "optionB": "w = 10 cm",
+  "optionC": "w = 8.5 cm",
+  "optionD": "w = 14 cm",
+  "correctAnswer": "A",
+  "hint": "P = 2l + 2w; l = w + 3",
+  "solutionExplanation": "2(w+3) + 2w = 34, 4w + 6 = 34, 4w = 28, w = 7"
+ },
+ {
+  "questionText": "A streaming service charges $7/month plus $2 per movie. Taylor's bill was $21. How many movies did she rent?",
+  "optionA": "7 movies",
+  "optionB": "10 movies",
+  "optionC": "14 movies",
+  "optionD": "5 movies",
+  "correctAnswer": "A",
+  "hint": "7 + 2m = 21",
+  "solutionExplanation": "2m = 14, m = 7"
+ },
+ {
+  "questionText": "The sum of three consecutive integers is 72. Find the smallest integer.",
+  "optionA": "23",
+  "optionB": "24",
+  "optionC": "25",
+  "optionD": "22",
+  "correctAnswer": "A",
+  "hint": "x + (x+1) + (x+2) = 72",
+  "solutionExplanation": "3x + 3 = 72, 3x = 69, x = 23"
+ },
+ {
+  "questionText": "Mark has $50 and saves $10/week. Sarah has $95 and saves $5/week. After how many weeks will they have the same amount?",
+  "optionA": "9 weeks",
+  "optionB": "5 weeks",
+  "optionC": "10 weeks",
+  "optionD": "45 weeks",
+  "correctAnswer": "A",
+  "hint": "50 + 10w = 95 + 5w",
+  "solutionExplanation": "5w = 45, w = 9"
+ }
+]

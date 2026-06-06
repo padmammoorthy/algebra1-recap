@@ -1,0 +1,432 @@
+[
+ {
+  "questionText": "Solve: x + 5 > 12",
+  "optionA": "x > 7",
+  "optionB": "x < 7",
+  "optionC": "x > 17",
+  "optionD": "x ≥ 7",
+  "correctAnswer": "A",
+  "hint": "Subtract 5 from both sides",
+  "solutionExplanation": "x > 12 - 5 = 7"
+ },
+ {
+  "questionText": "Solve: y - 3 ≤ -8",
+  "optionA": "y ≤ -5",
+  "optionB": "y ≥ -5",
+  "optionC": "y ≤ -11",
+  "optionD": "y < -5",
+  "correctAnswer": "A",
+  "hint": "Add 3 to both sides",
+  "solutionExplanation": "y ≤ -8 + 3 = -5"
+ },
+ {
+  "questionText": "Solve: -4m ≥ 24",
+  "optionA": "m ≤ -6",
+  "optionB": "m ≥ -6",
+  "optionC": "m ≤ 6",
+  "optionD": "m ≥ 6",
+  "correctAnswer": "A",
+  "hint": "Divide by -4, flip the sign",
+  "solutionExplanation": "m ≤ 24/(-4) = -6 (flip inequality)"
+ },
+ {
+  "questionText": "Solve: n/(-2) < 7",
+  "optionA": "n > -14",
+  "optionB": "n < -14",
+  "optionC": "n > 14",
+  "optionD": "n < 14",
+  "correctAnswer": "A",
+  "hint": "Multiply by -2, flip the sign",
+  "solutionExplanation": "n > 7×(-2) = -14 (flip inequality)"
+ },
+ {
+  "questionText": "Solve: 3x - 4 > 11",
+  "optionA": "x > 5",
+  "optionB": "x > 15",
+  "optionC": "x < 5",
+  "optionD": "x ≥ 5",
+  "correctAnswer": "A",
+  "hint": "Add 4, divide by 3",
+  "solutionExplanation": "3x > 15, x > 5"
+ },
+ {
+  "questionText": "Solve: -2y + 7 ≤ 15",
+  "optionA": "y ≥ -4",
+  "optionB": "y ≤ -4",
+  "optionC": "y ≥ 4",
+  "optionD": "y ≤ 4",
+  "correctAnswer": "A",
+  "hint": "Subtract 7, divide by -2 (flip)",
+  "solutionExplanation": "-2y ≤ 8, y ≥ -4"
+ },
+ {
+  "questionText": "Solve: m/4 - 1 ≥ 3",
+  "optionA": "m ≥ 16",
+  "optionB": "m ≥ 8",
+  "optionC": "m ≤ 16",
+  "optionD": "m ≥ 12",
+  "correctAnswer": "A",
+  "hint": "Add 1, multiply by 4",
+  "solutionExplanation": "m/4 ≥ 4, m ≥ 16"
+ },
+ {
+  "questionText": "Solve: 5 - 3b < 20",
+  "optionA": "b > -5",
+  "optionB": "b < -5",
+  "optionC": "b > 5",
+  "optionD": "b < 5",
+  "correctAnswer": "A",
+  "hint": "Subtract 5, divide by -3 (flip)",
+  "solutionExplanation": "-3b < 15, b > -5"
+ },
+ {
+  "questionText": "Solve: a + 9 < -2",
+  "optionA": "a < -11",
+  "optionB": "a > -11",
+  "optionC": "a < 7",
+  "optionD": "a < -7",
+  "correctAnswer": "A",
+  "hint": "Subtract 9",
+  "solutionExplanation": "a < -2 - 9 = -11"
+ },
+ {
+  "questionText": "Solve: k - 14 ≥ 0",
+  "optionA": "k ≥ 14",
+  "optionB": "k ≤ 14",
+  "optionC": "k > 14",
+  "optionD": "k ≥ -14",
+  "correctAnswer": "A",
+  "hint": "Add 14",
+  "solutionExplanation": "k ≥ 14"
+ },
+ {
+  "questionText": "Solve: 6h ≤ -42",
+  "optionA": "h ≤ -7",
+  "optionB": "h ≥ -7",
+  "optionC": "h ≤ 7",
+  "optionD": "h < -7",
+  "correctAnswer": "A",
+  "hint": "Divide by 6",
+  "solutionExplanation": "h ≤ -42/6 = -7"
+ },
+ {
+  "questionText": "Solve: -x > 5",
+  "optionA": "x < -5",
+  "optionB": "x > -5",
+  "optionC": "x < 5",
+  "optionD": "x > 5",
+  "correctAnswer": "A",
+  "hint": "Multiply by -1, flip sign",
+  "solutionExplanation": "x < -5"
+ },
+ {
+  "questionText": "Solve: 4x + 2 < 14",
+  "optionA": "x < 3",
+  "optionB": "x > 3",
+  "optionC": "x < 4",
+  "optionD": "x ≤ 3",
+  "correctAnswer": "A",
+  "hint": "Subtract 2, divide by 4",
+  "solutionExplanation": "4x < 12, x < 3"
+ },
+ {
+  "questionText": "Solve: -3y - 5 ≥ 10",
+  "optionA": "y ≤ -5",
+  "optionB": "y ≥ -5",
+  "optionC": "y ≤ 5",
+  "optionD": "y ≥ 5",
+  "correctAnswer": "A",
+  "hint": "Add 5, divide by -3 (flip)",
+  "solutionExplanation": "-3y ≥ 15, y ≤ -5"
+ },
+ {
+  "questionText": "Solve: 12 ≤ 3x - 6",
+  "optionA": "x ≥ 6",
+  "optionB": "x ≤ 6",
+  "optionC": "x ≥ 2",
+  "optionD": "x ≥ 18",
+  "correctAnswer": "A",
+  "hint": "Add 6, divide by 3",
+  "solutionExplanation": "18 ≤ 3x, 6 ≤ x, so x ≥ 6"
+ },
+ {
+  "questionText": "Solve: 3(x - 2) ≥ 12",
+  "optionA": "x ≥ 6",
+  "optionB": "x ≥ 4",
+  "optionC": "x ≤ 6",
+  "optionD": "x > 6",
+  "correctAnswer": "A",
+  "hint": "Distribute: 3x - 6 ≥ 12",
+  "solutionExplanation": "3x ≥ 18, x ≥ 6"
+ },
+ {
+  "questionText": "Solve: -2(y + 4) < 10",
+  "optionA": "y > -9",
+  "optionB": "y < -9",
+  "optionC": "y > 9",
+  "optionD": "y < 1",
+  "correctAnswer": "A",
+  "hint": "Distribute: -2y - 8 < 10",
+  "solutionExplanation": "-2y < 18, y > -9"
+ },
+ {
+  "questionText": "Solve: 4m + 7 ≤ 2m - 3",
+  "optionA": "m ≤ -5",
+  "optionB": "m ≥ -5",
+  "optionC": "m ≤ 5",
+  "optionD": "m < -5",
+  "correctAnswer": "A",
+  "hint": "Subtract 2m, subtract 7",
+  "solutionExplanation": "2m ≤ -10, m ≤ -5"
+ },
+ {
+  "questionText": "Solve: 5n - 2 > 8n + 13",
+  "optionA": "n < -5",
+  "optionB": "n > -5",
+  "optionC": "n < 5",
+  "optionD": "n > 5",
+  "correctAnswer": "A",
+  "hint": "Subtract 8n, add 2",
+  "solutionExplanation": "-3n > 15, n < -5"
+ },
+ {
+  "questionText": "Solve: 2(3a - 1) > 4a + 8",
+  "optionA": "a > 5",
+  "optionB": "a < 5",
+  "optionC": "a > 10",
+  "optionD": "a ≥ 5",
+  "correctAnswer": "A",
+  "hint": "Distribute: 6a - 2 > 4a + 8",
+  "solutionExplanation": "2a > 10, a > 5"
+ },
+ {
+  "questionText": "Solve: 8 - 3(b - 2) ≤ 2b + 4",
+  "optionA": "b ≥ 2",
+  "optionB": "b ≤ 2",
+  "optionC": "b ≥ -2",
+  "optionD": "b > 2",
+  "correctAnswer": "A",
+  "hint": "Distribute: 8 - 3b + 6 ≤ 2b + 4",
+  "solutionExplanation": "14 - 3b ≤ 2b + 4, 10 ≤ 5b, b ≥ 2"
+ },
+ {
+  "questionText": "Solve: (2k + 5)/3 ≥ -1",
+  "optionA": "k ≥ -4",
+  "optionB": "k ≤ -4",
+  "optionC": "k ≥ 4",
+  "optionD": "k ≥ -8",
+  "correctAnswer": "A",
+  "hint": "Multiply by 3, subtract 5, divide by 2",
+  "solutionExplanation": "2k + 5 ≥ -3, 2k ≥ -8, k ≥ -4"
+ },
+ {
+  "questionText": "Solve: 4(x + 3) - 2x > 18",
+  "optionA": "x > 3",
+  "optionB": "x < 3",
+  "optionC": "x > 6",
+  "optionD": "x > 9",
+  "correctAnswer": "A",
+  "hint": "Distribute: 4x + 12 - 2x > 18",
+  "solutionExplanation": "2x + 12 > 18, 2x > 6, x > 3"
+ },
+ {
+  "questionText": "Solve: -3(2y - 4) + 5y ≤ 20",
+  "optionA": "y ≥ -8",
+  "optionB": "y ≤ -8",
+  "optionC": "y ≥ 8",
+  "optionD": "y ≤ 8",
+  "correctAnswer": "A",
+  "hint": "Distribute: -6y + 12 + 5y ≤ 20",
+  "solutionExplanation": "-y + 12 ≤ 20, -y ≤ 8, y ≥ -8"
+ },
+ {
+  "questionText": "Solve: 6(m - 1) - 2m ≥ 14",
+  "optionA": "m ≥ 5",
+  "optionB": "m ≤ 5",
+  "optionC": "m ≥ 4",
+  "optionD": "m > 5",
+  "correctAnswer": "A",
+  "hint": "Distribute: 6m - 6 - 2m ≥ 14",
+  "solutionExplanation": "4m - 6 ≥ 14, 4m ≥ 20, m ≥ 5"
+ },
+ {
+  "questionText": "Solve: 10 - 2(n + 3) > 4",
+  "optionA": "n < 0",
+  "optionB": "n > 0",
+  "optionC": "n < -1",
+  "optionD": "n < 2",
+  "correctAnswer": "A",
+  "hint": "Distribute: 10 - 2n - 6 > 4",
+  "solutionExplanation": "4 - 2n > 4, -2n > 0, n < 0"
+ },
+ {
+  "questionText": "Solve: 4(2b - 1) ≤ 3(3b + 2)",
+  "optionA": "b ≥ -10",
+  "optionB": "b ≤ -10",
+  "optionC": "b ≥ 10",
+  "optionD": "b ≤ 10",
+  "correctAnswer": "A",
+  "hint": "Distribute: 8b - 4 ≤ 9b + 6",
+  "solutionExplanation": "-4 - 6 ≤ b, -10 ≤ b, so b ≥ -10"
+ },
+ {
+  "questionText": "Solve: 2(x - 4) - 5x > 7",
+  "optionA": "x < -5",
+  "optionB": "x > -5",
+  "optionC": "x < 5",
+  "optionD": "x > 5",
+  "correctAnswer": "A",
+  "hint": "Distribute: 2x - 8 - 5x > 7",
+  "solutionExplanation": "-3x - 8 > 7, -3x > 15, x < -5"
+ },
+ {
+  "questionText": "Solve: -5(k - 2) + 3k < 4",
+  "optionA": "k > 3",
+  "optionB": "k < 3",
+  "optionC": "k > -3",
+  "optionD": "k < -3",
+  "correctAnswer": "A",
+  "hint": "Distribute: -5k + 10 + 3k < 4",
+  "solutionExplanation": "-2k + 10 < 4, -2k < -6, k > 3"
+ },
+ {
+  "questionText": "Solve: 3(2c + 5) ≥ 4(c - 1)",
+  "optionA": "c ≥ -19/2",
+  "optionB": "c ≤ -19/2",
+  "optionC": "c ≥ 19/2",
+  "optionD": "c ≥ -2",
+  "correctAnswer": "A",
+  "hint": "Distribute: 6c + 15 ≥ 4c - 4",
+  "solutionExplanation": "2c ≥ -19, c ≥ -19/2"
+ },
+ {
+  "questionText": "Solve: 2x + 9 < 5x - 6",
+  "optionA": "x > 5",
+  "optionB": "x < 5",
+  "optionC": "x > -5",
+  "optionD": "x < -5",
+  "correctAnswer": "A",
+  "hint": "Subtract 2x, add 6",
+  "solutionExplanation": "15 < 3x, x > 5"
+ },
+ {
+  "questionText": "Solve: 12 - 4y ≥ 2y - 18",
+  "optionA": "y ≤ 5",
+  "optionB": "y ≥ 5",
+  "optionC": "y ≤ -5",
+  "optionD": "y < 5",
+  "correctAnswer": "A",
+  "hint": "Add 4y, add 18",
+  "solutionExplanation": "30 ≥ 6y, y ≤ 5"
+ },
+ {
+  "questionText": "Solve: 3(n + 2) - n ≤ 2(n + 3)",
+  "optionA": "All real numbers",
+  "optionB": "No solution",
+  "optionC": "n ≤ 0",
+  "optionD": "n ≥ 0",
+  "correctAnswer": "A",
+  "hint": "Simplify both sides",
+  "solutionExplanation": "3n + 6 - n ≤ 2n + 6, 2n + 6 ≤ 2n + 6. Always true."
+ },
+ {
+  "questionText": "Determine: 3(x + 4) > 3x + 10",
+  "optionA": "All real numbers",
+  "optionB": "No solution",
+  "optionC": "x > 10",
+  "optionD": "x > -2",
+  "correctAnswer": "A",
+  "hint": "Distribute: 3x + 12 > 3x + 10",
+  "solutionExplanation": "12 > 10 is always true. Solution: all reals."
+ },
+ {
+  "questionText": "Determine: 2(y - 3) ≤ 2y - 10",
+  "optionA": "No solution",
+  "optionB": "All real numbers",
+  "optionC": "y ≤ -4",
+  "optionD": "y ≤ 2",
+  "correctAnswer": "A",
+  "hint": "Distribute: 2y - 6 ≤ 2y - 10",
+  "solutionExplanation": "-6 ≤ -10 is false. No solution."
+ },
+ {
+  "questionText": "Determine: -5m + 6 ≥ -5m + 10",
+  "optionA": "No solution",
+  "optionB": "All real numbers",
+  "optionC": "m ≥ 4",
+  "optionD": "m ≤ -4",
+  "correctAnswer": "A",
+  "hint": "Add 5m to both sides",
+  "solutionExplanation": "6 ≥ 10 is false. No solution."
+ },
+ {
+  "questionText": "Determine: 4(2n + 1) ≤ 8n + 5",
+  "optionA": "All real numbers",
+  "optionB": "No solution",
+  "optionC": "n ≤ 1",
+  "optionD": "n ≤ 5/8",
+  "correctAnswer": "A",
+  "hint": "Distribute: 8n + 4 ≤ 8n + 5",
+  "solutionExplanation": "4 ≤ 5 is always true. All reals."
+ },
+ {
+  "questionText": "Determine: 6k - 4 < 2(3k - 2)",
+  "optionA": "No solution",
+  "optionB": "All real numbers",
+  "optionC": "k < 0",
+  "optionD": "k > 0",
+  "correctAnswer": "A",
+  "hint": "Distribute: 6k - 4 < 6k - 4",
+  "solutionExplanation": "-4 < -4 is false. No solution."
+ },
+ {
+  "questionText": "Determine: -2(3a + 4) > -6a - 5",
+  "optionA": "No solution",
+  "optionB": "All real numbers",
+  "optionC": "a > 3",
+  "optionD": "a < -3",
+  "correctAnswer": "A",
+  "hint": "Distribute: -6a - 8 > -6a - 5",
+  "solutionExplanation": "-8 > -5 is false. No solution."
+ },
+ {
+  "questionText": "Determine: 5(w - 1) + 3 ≤ 5w - 2",
+  "optionA": "All real numbers",
+  "optionB": "No solution",
+  "optionC": "w ≤ 0",
+  "optionD": "w ≤ 2",
+  "correctAnswer": "A",
+  "hint": "Simplify: 5w - 5 + 3 ≤ 5w - 2",
+  "solutionExplanation": "5w - 2 ≤ 5w - 2. Always true. All reals."
+ },
+ {
+  "questionText": "Determine: 3x + 4 > 3(x + 2)",
+  "optionA": "No solution",
+  "optionB": "All real numbers",
+  "optionC": "x > 2",
+  "optionD": "x > -2",
+  "correctAnswer": "A",
+  "hint": "Distribute: 3x + 4 > 3x + 6",
+  "solutionExplanation": "4 > 6 is false. No solution."
+ },
+ {
+  "questionText": "Determine: 2(4y - 3) ≤ 8y - 6",
+  "optionA": "All real numbers",
+  "optionB": "No solution",
+  "optionC": "y ≤ 0",
+  "optionD": "y ≤ 3",
+  "correctAnswer": "A",
+  "hint": "Distribute: 8y - 6 ≤ 8y - 6",
+  "solutionExplanation": "-6 ≤ -6 is true. All reals."
+ },
+ {
+  "questionText": "Determine: 10 - 3m ≥ -3(m - 4)",
+  "optionA": "No solution",
+  "optionB": "All real numbers",
+  "optionC": "m ≥ 2",
+  "optionD": "m ≤ 2",
+  "correctAnswer": "A",
+  "hint": "Distribute right: 10 - 3m ≥ -3m + 12",
+  "solutionExplanation": "10 ≥ 12 is false. No solution."
+ }
+]

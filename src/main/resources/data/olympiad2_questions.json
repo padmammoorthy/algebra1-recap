@@ -1,0 +1,252 @@
+[
+ {
+  "questionText": "Solve: 5x + 12 = 3x + 20",
+  "optionA": "x = 4",
+  "optionB": "x = 8",
+  "optionC": "x = -4",
+  "optionD": "x = 16",
+  "correctAnswer": "A",
+  "hint": "Subtract 3x from both sides, then subtract 12",
+  "solutionExplanation": "2x + 12 = 20, 2x = 8, x = 4"
+ },
+ {
+  "questionText": "Solve: 7y - 8 = 4y + 10",
+  "optionA": "y = 6",
+  "optionB": "y = 2",
+  "optionC": "y = -6",
+  "optionD": "y = 18/3",
+  "correctAnswer": "A",
+  "hint": "Subtract 4y, add 8",
+  "solutionExplanation": "3y = 18, y = 6"
+ },
+ {
+  "questionText": "Solve: 2m - 5 = 6m + 11",
+  "optionA": "m = -4",
+  "optionB": "m = 4",
+  "optionC": "m = -16/4",
+  "optionD": "m = 16",
+  "correctAnswer": "A",
+  "hint": "Subtract 6m from both sides",
+  "solutionExplanation": "-4m - 5 = 11, -4m = 16, m = -4"
+ },
+ {
+  "questionText": "Solve: 10 - 3p = 2p - 15",
+  "optionA": "p = 5",
+  "optionB": "p = -5",
+  "optionC": "p = 25/5",
+  "optionD": "p = 1",
+  "correctAnswer": "A",
+  "hint": "Add 3p to both sides, add 15",
+  "solutionExplanation": "25 = 5p, p = 5"
+ },
+ {
+  "questionText": "Solve: 8a + 4 = 9a - 3",
+  "optionA": "a = 7",
+  "optionB": "a = -7",
+  "optionC": "a = 1",
+  "optionD": "a = -1",
+  "correctAnswer": "A",
+  "hint": "Subtract 8a from both sides",
+  "solutionExplanation": "4 = a - 3, a = 7"
+ },
+ {
+  "questionText": "Solve: 4b - 7 = 2b + 5",
+  "optionA": "b = 6",
+  "optionB": "b = -1",
+  "optionC": "b = 12",
+  "optionD": "b = -6",
+  "correctAnswer": "A",
+  "hint": "Subtract 2b, add 7",
+  "solutionExplanation": "2b = 12, b = 6"
+ },
+ {
+  "questionText": "Solve: -2k + 6 = 3k - 14",
+  "optionA": "k = 4",
+  "optionB": "k = -4",
+  "optionC": "k = 20/5",
+  "optionD": "k = -8",
+  "correctAnswer": "A",
+  "hint": "Add 2k to both sides, add 14",
+  "solutionExplanation": "20 = 5k, k = 4"
+ },
+ {
+  "questionText": "Solve: 11w + 2 = 6w - 13",
+  "optionA": "w = -3",
+  "optionB": "w = 3",
+  "optionC": "w = -15/5",
+  "optionD": "w = 11",
+  "correctAnswer": "A",
+  "hint": "Subtract 6w, subtract 2",
+  "solutionExplanation": "5w = -15, w = -3"
+ },
+ {
+  "questionText": "Solve: 3(x - 4) = 2x + 5",
+  "optionA": "x = 17",
+  "optionB": "x = 7",
+  "optionC": "x = -7",
+  "optionD": "x = 1",
+  "correctAnswer": "A",
+  "hint": "Distribute: 3x - 12 = 2x + 5",
+  "solutionExplanation": "3x - 12 = 2x + 5, x = 17"
+ },
+ {
+  "questionText": "Solve: 2(3y + 1) = 4y - 10",
+  "optionA": "y = -6",
+  "optionB": "y = 6",
+  "optionC": "y = -12/2",
+  "optionD": "y = 4",
+  "correctAnswer": "A",
+  "hint": "Distribute: 6y + 2 = 4y - 10",
+  "solutionExplanation": "2y = -12, y = -6"
+ },
+ {
+  "questionText": "Solve: -4(m + 2) = 3(m - 5)",
+  "optionA": "m = 1",
+  "optionB": "m = -1",
+  "optionC": "m = 7/7",
+  "optionD": "m = 23/7",
+  "correctAnswer": "A",
+  "hint": "Distribute both sides: -4m - 8 = 3m - 15",
+  "solutionExplanation": "-4m - 8 = 3m - 15, 7 = 7m, m = 1"
+ },
+ {
+  "questionText": "Solve: 5(2 - p) = 2(p + 12)",
+  "optionA": "p = -2",
+  "optionB": "p = 2",
+  "optionC": "p = 14/7",
+  "optionD": "p = -14/7",
+  "correctAnswer": "A",
+  "hint": "Distribute: 10 - 5p = 2p + 24",
+  "solutionExplanation": "10 - 5p = 2p + 24, -14 = 7p, p = -2"
+ },
+ {
+  "questionText": "Solve: 6(a - 1) = 4(a + 3)",
+  "optionA": "a = 9",
+  "optionB": "a = -9",
+  "optionC": "a = 18/2",
+  "optionD": "a = 3",
+  "correctAnswer": "A",
+  "hint": "Distribute: 6a - 6 = 4a + 12",
+  "solutionExplanation": "2a = 18, a = 9"
+ },
+ {
+  "questionText": "Solve: 8 - 2(b + 1) = 4b - 12",
+  "optionA": "b = 3",
+  "optionB": "b = -3",
+  "optionC": "b = 18/6",
+  "optionD": "b = 6",
+  "correctAnswer": "A",
+  "hint": "Distribute: 8 - 2b - 2 = 4b - 12",
+  "solutionExplanation": "6 - 2b = 4b - 12, 18 = 6b, b = 3"
+ },
+ {
+  "questionText": "Solve: 3(2k - 4) = 2(k + 6)",
+  "optionA": "k = 6",
+  "optionB": "k = -6",
+  "optionC": "k = 24/4",
+  "optionD": "k = 3",
+  "correctAnswer": "A",
+  "hint": "Distribute: 6k - 12 = 2k + 12",
+  "solutionExplanation": "4k = 24, k = 6"
+ },
+ {
+  "questionText": "Solve: -(w - 5) = 3(2w - 3)",
+  "optionA": "w = 2",
+  "optionB": "w = -2",
+  "optionC": "w = 14/7",
+  "optionD": "w = 8/7",
+  "correctAnswer": "A",
+  "hint": "Distribute: -w + 5 = 6w - 9",
+  "solutionExplanation": "14 = 7w, w = 2"
+ },
+ {
+  "questionText": "Determine: 4(x + 2) = 4x + 8",
+  "optionA": "Infinitely many solutions",
+  "optionB": "No solution",
+  "optionC": "x = 0",
+  "optionD": "x = 2",
+  "correctAnswer": "A",
+  "hint": "Distribute: 4x + 8 = 4x + 8",
+  "solutionExplanation": "Both sides are identical. Identity — all real numbers."
+ },
+ {
+  "questionText": "Determine: 3(2y - 1) = 6y + 5",
+  "optionA": "No solution",
+  "optionB": "Infinitely many solutions",
+  "optionC": "y = 8/6",
+  "optionD": "y = -1",
+  "correctAnswer": "A",
+  "hint": "Distribute: 6y - 3 = 6y + 5",
+  "solutionExplanation": "-3 = 5 is false. No solution (contradiction)."
+ },
+ {
+  "questionText": "Determine: 2(m - 3) = 2m - 6",
+  "optionA": "Infinitely many solutions",
+  "optionB": "No solution",
+  "optionC": "m = 0",
+  "optionD": "m = 3",
+  "correctAnswer": "A",
+  "hint": "Distribute: 2m - 6 = 2m - 6",
+  "solutionExplanation": "Identity — true for all m."
+ },
+ {
+  "questionText": "Determine: -5p + 12 = -5p - 2",
+  "optionA": "No solution",
+  "optionB": "Infinitely many solutions",
+  "optionC": "p = 14/10",
+  "optionD": "p = 0",
+  "correctAnswer": "A",
+  "hint": "Add 5p to both sides",
+  "solutionExplanation": "12 = -2 is false. No solution."
+ },
+ {
+  "questionText": "Determine: 7(a + 1) - 3 = 7a + 4",
+  "optionA": "Infinitely many solutions",
+  "optionB": "No solution",
+  "optionC": "a = 0",
+  "optionD": "a = 1",
+  "correctAnswer": "A",
+  "hint": "Simplify left: 7a + 7 - 3 = 7a + 4",
+  "solutionExplanation": "7a + 4 = 7a + 4. Identity — all reals."
+ },
+ {
+  "questionText": "Determine: 2(3b + 4) = 6b + 5",
+  "optionA": "No solution",
+  "optionB": "Infinitely many solutions",
+  "optionC": "b = 1/6",
+  "optionD": "b = -3",
+  "correctAnswer": "A",
+  "hint": "Distribute: 6b + 8 = 6b + 5",
+  "solutionExplanation": "8 = 5 is false. No solution."
+ },
+ {
+  "questionText": "Car Company A charges $30/day + $0.20/mile. Company B charges $50/day + $0.10/mile. At how many miles is the cost the same?",
+  "optionA": "200 miles",
+  "optionB": "100 miles",
+  "optionC": "150 miles",
+  "optionD": "250 miles",
+  "correctAnswer": "A",
+  "hint": "30 + 0.20m = 50 + 0.10m",
+  "solutionExplanation": "0.10m = 20, m = 200"
+ },
+ {
+  "questionText": "An equilateral triangle has sides 2x+4. A square has sides x+6. If their perimeters are equal, find x.",
+  "optionA": "x = 6",
+  "optionB": "x = 12",
+  "optionC": "x = 3",
+  "optionD": "x = 18",
+  "correctAnswer": "A",
+  "hint": "3(2x+4) = 4(x+6)",
+  "solutionExplanation": "6x + 12 = 4x + 24, 2x = 12, x = 6"
+ },
+ {
+  "questionText": "James weighs 215 lb, losing 2 lb/week. Alex weighs 185 lb, gaining 1 lb/week. In how many weeks will they weigh the same?",
+  "optionA": "10 weeks",
+  "optionB": "15 weeks",
+  "optionC": "30 weeks",
+  "optionD": "5 weeks",
+  "correctAnswer": "A",
+  "hint": "215 - 2w = 185 + w",
+  "solutionExplanation": "30 = 3w, w = 10"
+ }
+]
