@@ -22,6 +22,7 @@ public class AppUser {
     private String avatarType; // "emoji" or "image"
     private String role; // USER, PARENT, ADMIN
     private LocalDateTime createdAt;
+    private LocalDateTime lastActiveAt;
 
     public AppUser() {}
 
@@ -51,4 +52,6 @@ public class AppUser {
     public void setRole(String role) { this.role = role; }
     public LocalDateTime getCreatedAt() { return createdAt; }
     public void setCreatedAt(LocalDateTime createdAt) { this.createdAt = createdAt; }
+    public LocalDateTime getLastActiveAt() { return lastActiveAt; }
+    public void setLastActiveAt(LocalDateTime lastActiveAt) { this.lastActiveAt = lastActiveAt; }
 }

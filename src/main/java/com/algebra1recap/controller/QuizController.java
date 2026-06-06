@@ -34,7 +34,7 @@ public class QuizController {
 
     @PostMapping("/answer")
     @ResponseBody
-    public AnswerResult checkAnswer(@RequestParam Long questionId, @RequestParam String selectedAnswer) {
+    public AnswerResult checkAnswer(@RequestParam Long questionId, @RequestParam String selectedAnswer, Authentication authentication) {
         return quizService.checkAnswer(questionId, selectedAnswer);
     }
 

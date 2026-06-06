@@ -56,10 +56,17 @@ public class ParentDashboardService {
             if (!results.isEmpty()) {
                 double avg = results.stream().mapToDouble(TestResult::getPercentage).average().orElse(0);
                 s.put("averageScore", Math.round(avg * 10.0) / 10.0);
-                s.put("lastActivity", results.get(0).getCompletedAt());
+                // Use the most recent of: last test completion OR last portal activity
+                LocalDateTime lastTest = results.get(0).getCompletedAt();
+                LocalDateTime lastActive = student.getLastActiveAt();
+                if (lastActive != null && (lastTest == null || lastActive.isAfter(lastTest))) {
+                    s.put("lastActivity", lastActive);
+                } else {
+                    s.put("lastActivity", lastTest);
+                }
             } else {
                 s.put("averageScore", 0.0);
-                s.put("lastActivity", null);
+                s.put("lastActivity", student.getLastActiveAt());
             }
             s.put("badgeCount", badgeRepository.findByUserIdOrderByEarnedAtDesc(student.getId()).size());
             summaries.add(s);
