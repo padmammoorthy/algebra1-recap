@@ -78,6 +78,7 @@
                     <div class="result-area" style="display:none">
                         <div class="result-message"></div>
                         <div class="hint-text"></div>
+                        <div class="solution-text" style="display:none"></div>
                     </div>
                 </div>
 
@@ -129,6 +130,7 @@
                 resultArea.style.display = 'block';
                 const msgEl = resultArea.querySelector('.result-message');
                 const hintEl = resultArea.querySelector('.hint-text');
+                const solutionEl = resultArea.querySelector('.solution-text');
 
                 if (data.correct) {
                     btn.classList.add('correct');
@@ -145,6 +147,10 @@
                     if (data.hint) {
                         hintEl.textContent = '💡 Hint: ' + data.hint;
                         hintEl.style.display = 'block';
+                    }
+                    if (data.solutionExplanation) {
+                        solutionEl.textContent = '📝 Solution: ' + data.solutionExplanation;
+                        solutionEl.style.display = 'block';
                     }
                 }
             });

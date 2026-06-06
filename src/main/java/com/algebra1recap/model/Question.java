@@ -22,6 +22,9 @@ public class Question {
     @Column(length = 1000)
     private String hint;
 
+    @Column(length = 2000)
+    private String solutionExplanation;
+
     private int lessonNumber;
     private String lessonTitle;
     private String topic;
@@ -60,6 +63,8 @@ public class Question {
     public void setCorrectAnswer(String correctAnswer) { this.correctAnswer = correctAnswer; }
     public String getHint() { return hint; }
     public void setHint(String hint) { this.hint = hint; }
+    public String getSolutionExplanation() { return solutionExplanation; }
+    public void setSolutionExplanation(String solutionExplanation) { this.solutionExplanation = solutionExplanation; }
     public int getLessonNumber() { return lessonNumber; }
     public void setLessonNumber(int lessonNumber) { this.lessonNumber = lessonNumber; }
     public String getLessonTitle() { return lessonTitle; }

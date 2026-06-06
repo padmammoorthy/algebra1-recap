@@ -25,6 +25,8 @@ public class QuizService {
         Question question = questionRepository.findById(questionId)
                 .orElseThrow(() -> new RuntimeException("Question not found: " + questionId));
         boolean correct = question.getCorrectAnswer().equalsIgnoreCase(selectedAnswer);
-        return new AnswerResult(questionId, selectedAnswer, question.getCorrectAnswer(), correct, correct ? null : question.getHint());
+        return new AnswerResult(questionId, selectedAnswer, question.getCorrectAnswer(), correct,
+                correct ? null : question.getHint(),
+                correct ? null : question.getSolutionExplanation());
     }
 }
