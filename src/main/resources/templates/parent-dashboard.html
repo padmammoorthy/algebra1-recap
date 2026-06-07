@@ -95,6 +95,14 @@
                                     <span class="mini-label">Badges</span>
                                 </div>
                             </div>
+                            <div class="student-last-active" th:if="${student['lastActivity'] != null}">
+                                <span class="last-active-label">Last active: </span>
+                                <span class="last-active-time" th:text="${#temporals.format(student['lastActivity'], 'MMM d, yyyy h:mm a')}"></span>
+                            </div>
+                            <div class="student-last-active" th:if="${student['lastActivity'] == null}">
+                                <span class="last-active-label">Last active: </span>
+                                <span class="last-active-time">No activity yet</span>
+                            </div>
                         </div>
                     </div>
                 </section>

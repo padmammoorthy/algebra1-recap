@@ -548,3 +548,17 @@ a {
     color: #fff;
     font-weight: 600;
 }
+
+/* Student last active in parent dashboard */
+.student-last-active {
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #f1f2f6;
+    font-size: 0.8rem;
+    color: #636e72;
+}
+
+.last-active-time {
+    font-weight: 500;
+    color: #2d3436;
+}
