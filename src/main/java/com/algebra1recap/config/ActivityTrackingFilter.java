@@ -32,9 +32,9 @@ public class ActivityTrackingFilter implements Filter {
         HttpServletRequest httpReq = (HttpServletRequest) request;
         String path = httpReq.getRequestURI();
 
-        // Only track actual page/action requests, skip static resources
-        if (!path.startsWith("/css") && !path.startsWith("/js") && !path.startsWith("/images")
-                && !path.startsWith("/favicon") && !path.startsWith("/h2-console")) {
+        // Only track activity on learning pages: lessons, practice quiz, tests, olympiad
+        if (path.startsWith("/lessons") || path.startsWith("/quiz") || path.startsWith("/answer")
+                || path.startsWith("/tests") || path.startsWith("/olympiad")) {
 
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             if (auth != null && auth.isAuthenticated() && !"anonymousUser".equals(auth.getPrincipal())) {
