@@ -1,23 +1,24 @@
 package com.algebra1recap.config;
 
-import com.algebra1recap.model.AppUser;
 import com.algebra1recap.repository.UserRepository;
-import jakarta.servlet.*;
+import jakarta.servlet.FilterChain;
+import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
+import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
 import java.time.LocalDateTime;
 
 /**
- * Tracks last activity for any authenticated user on every request.
- * This ensures the parent dashboard always shows accurate "last activity" 
- * regardless of whether the student used practice tests, formal tests, lessons, etc.
+ * Tracks last activity for authenticated users when they access learning pages.
+ * Extends OncePerRequestFilter to run AFTER Spring Security populates the SecurityContext.
  */
 @Component
-public class ActivityTrackingFilter implements Filter {
+public class ActivityTrackingFilter extends OncePerRequestFilter {
 
     private final UserRepository userRepository;
 
@@ -26,25 +27,29 @@ public class ActivityTrackingFilter implements Filter {
     }
 
     @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-            throws IOException, ServletException {
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
+            throws ServletException, IOException {
 
-        HttpServletRequest httpReq = (HttpServletRequest) request;
-        String path = httpReq.getRequestURI();
+        // Process the request first (so Spring Security sets up auth context)
+        filterChain.doFilter(request, response);
 
-        // Only track activity on learning pages: lessons, practice quiz, tests, olympiad
+        // Then track activity after the request is processed
+        String path = request.getRequestURI();
+
         if (path.startsWith("/lessons") || path.startsWith("/quiz") || path.startsWith("/answer")
                 || path.startsWith("/tests") || path.startsWith("/olympiad")) {
 
             Authentication auth = SecurityContextHolder.getContext().getAuthentication();
             if (auth != null && auth.isAuthenticated() && !"anonymousUser".equals(auth.getPrincipal())) {
-                userRepository.findByUsername(auth.getName()).ifPresent(user -> {
-                    user.setLastActiveAt(LocalDateTime.now());
-                    userRepository.save(user);
-                });
+                try {
+                    userRepository.findByUsername(auth.getName()).ifPresent(user -> {
+                        user.setLastActiveAt(LocalDateTime.now());
+                        userRepository.save(user);
+                    });
+                } catch (Exception e) {
+                    // Don't let activity tracking break the request
+                }
             }
         }
-
-        chain.doFilter(request, response);
     }
 }
